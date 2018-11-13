@@ -22,16 +22,6 @@
     <color rgba="0.2 0.2 0.2 1" />
   </material>
 
-  <link name="gps_link">
-    <visual>
-      <origin xyz="0 0 0" />
-      <geometry>
-        <box size="0.06 0.04 0.02" />
-      </geometry>
-      <material name="orange" />
-    </visual>
-  </link>
-
   <link name="horizontal_laser_link">
     <visual>
       <origin xyz="0 0 0" />
@@ -43,12 +33,6 @@
   </link>
 
   <link name="base_link" />
-
-  <joint name="gps_link_joint" type="fixed">
-    <parent link="base_link" />
-    <child link="gps_link" />
-    <origin xyz="0 0 0" />
-  </joint>
 
   <joint name="horizontal_laser_link_joint" type="fixed">
     <parent link="base_link" />

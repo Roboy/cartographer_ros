@@ -31,4 +31,17 @@
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
       type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
+
+  <node name="sick_mrs_6xxx" pkg="sick_scan" type="sick_generic_caller"  respawn="false" output="screen">
+    <param name="scanner_type" type="string" value="sick_mrs_6xxx" />
+    <param name="frame_id" value="/laser_1"/>
+    <param name="min_ang" type="double" value="-2.35619449" /><!-- -135° -->
+    <param name="max_ang" type="double" value="2.35619449" /><!-- 135° -->
+    <param name="range_max" type="double" value="70.0" />
+    <param name="intensity" type="bool" value="True" />
+    <param name="hostname" type="string" value="192.168.1.24" />
+    <param name="port" type="string" value="2112" />
+    <param name="timelimit" type="int" value="5" />
+  </node>
+
 </launch>
