@@ -22,11 +22,11 @@ options = {
   tracking_frame = "base_link",
   published_frame = "base_link",
   odom_frame = "odom",
-  provide_odom_frame = true,
+  provide_odom_frame = false,
   publish_frame_projected_to_2d = false,
   use_odometry = false,
   use_nav_sat = false,
-  use_landmarks = true,
+  use_landmarks = false,
   num_laser_scans = 1,
   num_multi_echo_laser_scans = 0,
   num_subdivisions_per_laser_scan = 10,
@@ -43,6 +43,6 @@ options = {
 }
 
 MAP_BUILDER.use_trajectory_builder_2d = true
-TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 10
+TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 923
 
 return options
