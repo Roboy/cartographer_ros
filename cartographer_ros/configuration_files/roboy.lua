@@ -22,8 +22,8 @@ options = {
   tracking_frame = "base_link",
   published_frame = "base_link",
   odom_frame = "odom",
-  provide_odom_frame = false,
-  publish_frame_projected_to_2d = false,
+  provide_odom_frame = true,
+  publish_frame_projected_to_2d = true,
   use_odometry = false,
   use_nav_sat = false,
   use_landmarks = false,
@@ -43,6 +43,7 @@ options = {
 }
 
 MAP_BUILDER.use_trajectory_builder_2d = true
-TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 923
+TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 10
+TRAJECTORY_BUILDER_2D.use_imu_data = false
 
 return options
