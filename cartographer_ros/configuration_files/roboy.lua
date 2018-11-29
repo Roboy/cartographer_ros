@@ -51,7 +51,7 @@ TRAJECTORY_BUILDER_2D.use_imu_data = false
 
 
 -- -- LOCAL -- --
---TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching
+TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 5
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window = 1
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 1
@@ -75,6 +75,23 @@ POSE_GRAPH.optimize_every_n_nodes = 5
 --POSE_GRAPH.fast_correlative_scan_matcher_3d.linear_z_search_window
 --POSE_GRAPH.fast_correlative_scan_matcher*.angular_search_window
 
-POSE_GRAPH.constraint_builder.sampling_ratio
+POSE_GRAPH.constraint_builder.sampling_ratio = 0.5
+
+POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 3
+
+--POSE_GRAPH.constraint_builder.min_score
+--POSE_GRAPH.constraint_builder.ceres_scan_matcher
+
+--POSE_GRAPH.constraint_builder.loop_closure_translation_weight
+--POSE_GRAPH.constraint_builder.loop_closure_rotation_weight 
+--POSE_GRAPH.matcher_translation_weight
+--POSE_GRAPH.matcher_rotation_weight
+--POSE_GRAPH.optimization_problem.*_weight
+--POSE_GRAPH.optimization_problem.ceres_solver_options
+
+POSE_GRAPH.max_num_final_iterations = 2
 
 return options
+
+
+
