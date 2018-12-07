@@ -26,7 +26,6 @@
           -configuration_directory $(find cartographer_ros)/configuration_files
           -configuration_basename roboy_indoor.lua"
       output="screen">
-    <!-- <remap from="scan" to="fake/scan" /> -->
     <remap from="echoes" to="horizontal_laser_2d" />
   </node>
 
