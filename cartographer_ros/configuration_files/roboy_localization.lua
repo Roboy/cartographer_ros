@@ -44,22 +44,19 @@ options = {
 
 
 -- -- LOCALIZATION -- --
-MAP_BUILDER.use_trajectory_builder_2d = true
 TRAJECTORY_BUILDER.pure_localization = true
 --TRAJECTORY_BUILDER.pure_localization_trimmer = {
 --    max_submaps_to_keep = 3,
 --}
 
-POSE_GRAPH.constraint_builder.sampling_ratio = 0.005
 POSE_GRAPH.global_sampling_ratio = 0.005
 
-MAP_BUILDER.use_trajectory_builder_2d = false
-
+MAP_BUILDER.use_trajectory_builder_2d = true
 
 
 -- -- INPUT DATA -- --
 TRAJECTORY_BUILDER_2D.min_range = 0.2
-TRAJECTORY_BUILDER_2D.max_range = 20
+TRAJECTORY_BUILDER_2D.max_range = 20 -- reduced from 20 for localization
 
 TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 10
 
@@ -69,7 +66,7 @@ TRAJECTORY_BUILDER_2D.use_imu_data = false
 
 
 -- -- LOCAL -- --
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = true
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = false
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.max_num_iterations = 20
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads = 3
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 1e-8
@@ -97,9 +94,9 @@ POSE_GRAPH.constraint_builder.max_constraint_distance = 10
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 10
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(90.0)
 
-POSE_GRAPH.constraint_builder.sampling_ratio = 0.005 -- reduced for localization
+POSE_GRAPH.constraint_builder.sampling_ratio = 0.005 -- reduced by 10 for localization
 
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 5
+POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 5 -- do not reduce for localization
 
 POSE_GRAPH.constraint_builder.min_score = 0.5
 --POSE_GRAPH.constraint_builder.ceres_scan_matcher
@@ -111,7 +108,7 @@ POSE_GRAPH.constraint_builder.min_score = 0.5
 --POSE_GRAPH.optimization_problem.*_weight
 --POSE_GRAPH.optimization_problem.ceres_solver_options
 
-POSE_GRAPH.max_num_final_iterations = 10
+POSE_GRAPH.max_num_final_iterations = 1 -- reduced by 10 for localization
 
 return options
 
