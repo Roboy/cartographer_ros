@@ -42,7 +42,8 @@ Some useful syntax
 
 Record a  `.bag`-file
 ---------------------
-Create Roboys own bag [like here](https://google-cartographer-ros.readthedocs.io/en/latest/your_bag.html).
+Create Roboys own bag `like here`_.
+.._like here: https://google-cartographer-ros.readthedocs.io/en/latest/your_bag.html
 
 Check your `.bag`-file
 ----------------------
@@ -50,9 +51,9 @@ Check your `.bag`-file
 
 	rosrun cartographer_ros cartographer_rosbag_validate -bag_filename your_bag.bag
 
-Get sample `.bag`-files::
+Get sample `.bag`-files
 -----------------------
-
+::
 	wget -P ~/Downloads https://storage.googleapis.com/cartographer-public-data/bags/backpack_2d/cartographer_paper_deutsches_museum.bag
 
 
@@ -86,7 +87,7 @@ Visualize `.pbstream`-file::
 
 Convert  `.pbstream`-file to `.yaml` map file::
 
-rosrun cartographer_ros cartographer_pbstream_to_ros_map -pbstream_filename ${HOME}/Downloads/DeuMu.bag.pbstream
+	rosrun cartographer_ros cartographer_pbstream_to_ros_map -pbstream_filename ${HOME}/Downloads/DeuMu.bag.pbstream
 
 Pure Localization
 -----------------
