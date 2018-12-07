@@ -15,7 +15,6 @@
 -->
 
 <launch>
-  <!--<param name="/use_sim_time" value="true" />-->
 
   <param name="robot_description"
     textfile="$(find cartographer_ros)/urdf/roboy.urdf" />
@@ -37,4 +36,5 @@
 
   <node name="rviz" pkg="rviz" type="rviz" required="true"
       args="-d $(find cartographer_ros)/configuration_files/demo_2d.rviz" />
+
 </launch>
