@@ -48,14 +48,15 @@ Create Roboys own bag `like here`_.
 
 Check your `.bag`-file
 ----------------------
-`ROS Bag files`_::
-.. _ROS Bag files: http://wiki.ros.org/Bags
+`ROS Bag files`_
+.. _ROS Bag files: http://wiki.ros.org/Bags ::
 
 	rosrun cartographer_ros cartographer_rosbag_validate -bag_filename your_bag.bag
 
 Get sample `.bag`-files
 -----------------------
-::
+Get sample `.bag`-files::
+
 	wget -P ~/Downloads https://storage.googleapis.com/cartographer-public-data/bags/backpack_2d/cartographer_paper_deutsches_museum.bag
 
 
