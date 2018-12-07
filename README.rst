@@ -48,7 +48,8 @@ Create Roboys own bag `like here`_.
 
 Check your `.bag`-file
 ----------------------
-[ROS Bag files](http://wiki.ros.org/Bags)::
+`ROS Bag files`_::
+.. _ROS Bag files: http://wiki.ros.org/Bags
 
 	rosrun cartographer_ros cartographer_rosbag_validate -bag_filename your_bag.bag
 
@@ -73,7 +74,8 @@ According files for Roboy are defined. To test with Roboys bag run::
 
 Save a Map 
 ----------
-Instances given for saving a map after SLAM has finished to [generate a `.pbstream`-file](https://github.com/googlecartographer/cartographer_ros/blob/master/docs/source/assets_writer.rst) and then converting it to a ROS `.yaml` map file::
+Instances given for saving a map after SLAM has finished to `generate a .pbstream-file`_ and then converting it to a ROS `.yaml` map file::
+.. _generate a .pbstream-file: https://github.com/googlecartographer/cartographer_ros/blob/master/docs/source/assets_writer.rst
 
 	# Finish the first trajectory. No further data will be accepted on it.
 	rosservice call /finish_trajectory 0
