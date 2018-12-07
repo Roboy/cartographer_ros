@@ -43,7 +43,8 @@ Some useful syntax
 Record a  `.bag`-file
 ---------------------
 Create Roboys own bag `like here`_.
-.._like here: https://google-cartographer-ros.readthedocs.io/en/latest/your_bag.html
+
+.. _like here: https://google-cartographer-ros.readthedocs.io/en/latest/your_bag.html
 
 Check your `.bag`-file
 ----------------------
