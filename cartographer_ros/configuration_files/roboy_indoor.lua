@@ -24,6 +24,7 @@ options = {
   odom_frame = "odom",
   provide_odom_frame = true,
   publish_frame_projected_to_2d = false,
+  use_pose_extrapolator = true,
   use_odometry = false,
   use_nav_sat = false,
   use_landmarks = false,
@@ -90,7 +91,7 @@ POSE_GRAPH.constraint_builder.sampling_ratio = 0.05
 
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 5
 
-POSE_GRAPH.constraint_builder.min_score = 0.7
+POSE_GRAPH.constraint_builder.min_score = 0.5
 
 --POSE_GRAPH.constraint_builder.ceres_scan_matcher
 
