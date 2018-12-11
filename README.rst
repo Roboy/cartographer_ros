@@ -37,6 +37,13 @@ Getting started
 .. _our Read the Docs site: https://google-cartographer-ros.readthedocs.io
 .. _creating an issue: https://github.com/googlecartographer/cartographer_ros/issues/new?labels=question
 
+Documentation
+=============
+PDF containing `Google Cartographer_ROS documentation`_ .
+
+.. _Google Cartographer_ROS documentation: https://media.readthedocs.org/pdf/google-cartographer-ros/latest/google-cartographer-ros.pdf
+
+
 Some useful syntax
 ==================
 
@@ -124,24 +131,16 @@ options to pick from for the `.bag`-files::
 
 Structure
 =========
-Documentation
--------------
-PDF containing `Google Cartographer_ROS documentation`_ .
-
-.. _Google Cartographer_ROS documentation: https://media.readthedocs.org/pdf/google-cartographer-ros/latest/google-cartographer-ros.pdf
-
-Structure 
----------
 Launch Files
 ------------
-`.launch`-files of cartographer_ros are located at `src/cartographer_ros/cartographer_ros/launch`_ . Make sure you call the according `roboy` files in your launch file. Also, for the SICK LIDAR note `this github issue`_ .
+`.launch`-files of cartographer_ros are located at `src/cartographer_ros/cartographer_ros/launch`_. Make sure you call the according `roboy` files in your launch file. Also, for the SICK LIDAR note `this github issue`_.
 
 .. _src/cartographer_ros/cartographer_ros/launch: https://github.com/Roboy/cartographer_ros/tree/c4a82825c947e6853b1fc0132a6c53e486d7a63a/cartographer_ros/launch
 .. _this github issue: https://github.com/SICKAG/sick_scan/issues/5
 
 Configuration Files
 -------------------
-Configuration is stored in  `.lua`-files located at `src/cartographer_ros/cartographer_ros/configuration`_ . `How to use them in cartographer.` 
+Configuration is stored in  `.lua`-files located at `src/cartographer_ros/cartographer_ros/configuration`_. `How to use them in cartographer.` 
 
 .. _src/cartographer_ros/cartographer_ros/configuration: https://github.com/Roboy/cartographer_ros/tree/c4a82825c947e6853b1fc0132a6c53e486d7a63a/cartographer_ros/configuration_files
 .. _How to use them in cartographer.: https://google-cartographer-ros.readthedocs.io/en/latest/configuration.html
@@ -149,7 +148,7 @@ Configuration is stored in  `.lua`-files located at `src/cartographer_ros/cartog
 URDF Files
 ----------
 `urdf`-files essentially define the physical configuration of the robot such as relative positions of different sensors. More can be found in the `ROS wiki about urdf`_ .
-In cartographer_ros, these are located at `src/cartographer_ros/cartographer_ros/urdf`_ .
+In cartographer_ros, these are located at `src/cartographer_ros/cartographer_ros/urdf`_.
 
 .. _ROS wiki about urdf: http://wiki.ros.org/urdf
 .. _src/cartographer_ros/cartographer_ros/urdf: https://github.com/Roboy/cartographer_ros/tree/c4a82825c947e6853b1fc0132a6c53e486d7a63a/cartographer_ros/urdf
