@@ -73,7 +73,10 @@ Get sample `.bag`-files::
 
 Cut `.bag`-files
 ----------------
-Cut certain timeframe from `.bag`-file: ::
+Cut certain timeframe from `.bag`-file: 
+
+::
+
 	rosbag filter ${HOME}/Downloads/b-2016-04-27-12-31-41.bag ${HOME}/Downloads/DeuMuRob_1.bag "t.secs>= 1461760303 and t.secs <= 1461760503"
 
 
