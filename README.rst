@@ -77,7 +77,7 @@ Cut certain timeframe from `.bag`-file:
 
 ::
 
-	rosbag filter ${HOME}/Downloads/b-2016-04-27-12-31-41.bag ${HOME}/Downloads/DeuMuRob_1.bag "t.secs>= 1461760303 and t.secs <= 1461760503"
+	rosbag filter Input.bag Output.bag "t.secs>= 1461760303 and t.secs <= 1461760503"
 
 
 Run Cartographer online
@@ -160,6 +160,48 @@ Roboy
 =====
 
 There are online, offline and localization scripts for Roboy so far.
+
+MultiEcho vs Scan
+=================
+(temprary!)
+
+#### pointcloud to laserscan recording
+`roboy_indoor_offline.launch`, [line 29](https://github.com/Roboy/cartographer_ros/blob/55defd7b8d6be13b5f1b2d2205e842b1b016661c/cartographer_ros/launch/roboy_indoor_offline.launch#L29-L30)
+```
+<remap from="scan" to="fake/scan" />
+```
+add the following lines to the `.launch` file:
+```
+<node pkg="tf" type="static_transform_publisher" name="world_to_map_broadcaster" args="0 0 0 0 0 0 world map 50" />
+<node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 base_link laser 50" />
+```
+
+`roboy.lua`, [lines 30 and 31](https://github.com/Roboy/cartographer_ros/blob/c4a82825c947e6853b1fc0132a6c53e486d7a63a/cartographer_ros/configuration_files/roboy.lua#L30-L31):
+```
+num_laser_scans = 1,
+num_multi_echo_laser_scans = 0,
+```
+Finally, to run execute
+```
+roslaunch cartographer_ros roboy_indoor_offline.launch bag_filename:=${HOME}/Documents/Roboy/catkin_ws/2018-11-15-17-36-28.bag
+```
+
+##### Deutsches Museum 2D
+
+`roboy_indoor_offline.launch`, [line 29](https://github.com/Roboy/cartographer_ros/blob/55defd7b8d6be13b5f1b2d2205e842b1b016661c/cartographer_ros/launch/roboy_indoor_offline.launch#L29-L30)
+```
+<remap from="echoes" to="horizontal_laser_2d" />
+```
+
+`roboy.lua`, [lines 30 and 31](https://github.com/Roboy/cartographer_ros/blob/c4a82825c947e6853b1fc0132a6c53e486d7a63a/cartographer_ros/configuration_files/roboy.lua#L30-L31):
+```
+num_laser_scans = 0,
+num_multi_echo_laser_scans = 1,
+```
+Finally, to run execute
+```
+roslaunch cartographer_ros roboy_indoor_offline.launch bag_filename:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
+```
 
 Contributing
 ============
