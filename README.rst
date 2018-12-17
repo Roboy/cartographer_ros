@@ -91,7 +91,7 @@ Run Cartographer offline on a  `.bag`-file
 ------------------------------------------
 According files for Roboy are defined. To test with Roboys bag run::
 
-	roslaunch cartographer_ros roboy_indoor_offline.launch bag_filename:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
+	roslaunch cartographer_ros roboy_indoor_offline.launch bag_filenames:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
 
 Save a Map 
 ----------
