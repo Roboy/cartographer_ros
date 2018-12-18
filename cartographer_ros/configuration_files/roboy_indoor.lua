@@ -83,7 +83,7 @@ TRAJECTORY_BUILDER_2D.submaps.num_range_data = 25
 
 
 -- -- GLOBAL -- --
-POSE_GRAPH.optimize_every_n_nodes = 0
+POSE_GRAPH.optimize_every_n_nodes = 25
 
 POSE_GRAPH.constraint_builder.max_constraint_distance = 10
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 10
