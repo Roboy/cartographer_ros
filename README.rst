@@ -33,14 +33,12 @@ Getting started
 
 * Learn to use Cartographer with ROS at `our Read the Docs site`_.
 * You can ask a question by `creating an issue`_.
+* To run the examples shown, you need to get `Roboy's LIDAR recordings from GDrive`_.
+* PDF containing `Google Cartographer_ROS documentation`_ .
 
 .. _our Read the Docs site: https://google-cartographer-ros.readthedocs.io
 .. _creating an issue: https://github.com/googlecartographer/cartographer_ros/issues/new?labels=question
-
-Documentation
-=============
-PDF containing `Google Cartographer_ROS documentation`_ .
-
+.. _Roboy's LIDAR recordings from GDrive: https://drive.google.com/drive/folders/1ZM3ox1b3obriWD1hJtNl5FpDvfjspb3m
 .. _Google Cartographer_ROS documentation: https://media.readthedocs.org/pdf/google-cartographer-ros/latest/google-cartographer-ros.pdf
 
 
@@ -63,13 +61,6 @@ Check your `.bag`-file
 
 	rosrun cartographer_ros cartographer_rosbag_validate -bag_filename your_bag.bag
 
-Get sample `.bag`-files
------------------------
-Get sample `.bag`-files::
-
-	wget -P ~/Downloads https://storage.googleapis.com/cartographer-public-data/bags/backpack_2d/cartographer_paper_deutsches_museum.bag
-	wget -P ~/Downloads https://storage.googleapis.com/cartographer-public-data/bags/backpack_2d/b2-2016-04-05-14-44-52.bag
-	wget -P ~/Downloads https://storage.googleapis.com/cartographer-public-data/bags/backpack_2d/b2-2016-04-27-12-31-41.bag
 
 Cut `.bag`-files
 ----------------
@@ -85,13 +76,13 @@ Run Cartographer online
 According files for Roboy are defined. To test with Roboy's bag run::
 
 	roslaunch cartographer_ros roboy_indoor_online.launch 
-	rosbag play ${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
+	rosbag play ${HOME}/data/utum/utum_groundfloor_cw.bag
 
 Run Cartographer offline on a  `.bag`-file
 ------------------------------------------
 According files for Roboy are defined. To test with Roboys bag run::
 
-	roslaunch cartographer_ros roboy_indoor_offline.launch bag_filenames:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
+	roslaunch cartographer_ros roboy_indoor_offline.launch bag_filenames:=${HOME}/data/utum/utum_groundfloor_cw.bag
 
 Save a Map 
 ----------
@@ -120,17 +111,12 @@ Pure Localization
 -----------------
 Launch cartographer_ros and provide it with the `.pbstream`-file saved from a previous offline-run with SLAM::
 
-	roslaunch cartographer_ros roboy_localization.launch load_state_filename:=${HOME}/Downloads/DeuMu.bag.pbstream
+	roslaunch cartographer_ros roboy_localization.launch load_state_filename:=${HOME}/data/utum/utum_groundfloor_cw.bag.pbstream
 
 Play a `.bag`-file faking the live location of the robot::
 
-	rosbag play ${HOME}/Downloads/b2-2016-04-05-14-44-52.bag
+	rosbag play ${HOME}/data/utum/utum_groundfloor_ccw.bag
 
-options to pick from for the `.bag`-files::
-
-	${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
-	${HOME}/Downloads/b2-2016-04-27-12-31-41.bag
-	${HOME}/Downloads/b2-2016-04-05-14-44-52.bag
 
 Structure
 =========
@@ -161,66 +147,5 @@ Roboy
 
 There are online, offline and localization scripts for Roboy so far.
 
-MultiEcho vs Scan
-=================
-(temprary!)
 
-#### pointcloud to laserscan recording
-`roboy_indoor_offline.launch`, [line 29](https://github.com/Roboy/cartographer_ros/blob/55defd7b8d6be13b5f1b2d2205e842b1b016661c/cartographer_ros/launch/roboy_indoor_offline.launch#L29-L30)
-```
-<remap from="scan" to="fake/scan" />
-```
-add the following lines to the `.launch` file:
-```
-<node pkg="tf" type="static_transform_publisher" name="world_to_map_broadcaster" args="0 0 0 0 0 0 world map 50" />
-<node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 base_link laser 50" />
-```
-
-`roboy.lua`, [lines 30 and 31](https://github.com/Roboy/cartographer_ros/blob/c4a82825c947e6853b1fc0132a6c53e486d7a63a/cartographer_ros/configuration_files/roboy.lua#L30-L31):
-```
-num_laser_scans = 1,
-num_multi_echo_laser_scans = 0,
-```
-Finally, to run execute
-```
-roslaunch cartographer_ros roboy_indoor_offline.launch bag_filename:=${HOME}/Documents/Roboy/catkin_ws/2018-11-15-17-36-28.bag
-```
-
-##### Deutsches Museum 2D
-
-`roboy_indoor_offline.launch`, [line 29](https://github.com/Roboy/cartographer_ros/blob/55defd7b8d6be13b5f1b2d2205e842b1b016661c/cartographer_ros/launch/roboy_indoor_offline.launch#L29-L30)
-```
-<remap from="echoes" to="horizontal_laser_2d" />
-```
-
-`roboy.lua`, [lines 30 and 31](https://github.com/Roboy/cartographer_ros/blob/c4a82825c947e6853b1fc0132a6c53e486d7a63a/cartographer_ros/configuration_files/roboy.lua#L30-L31):
-```
-num_laser_scans = 0,
-num_multi_echo_laser_scans = 1,
-```
-Finally, to run execute
-```
-roslaunch cartographer_ros roboy_indoor_offline.launch bag_filename:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
-```
-
-Contributing
-============
-
-You can find information about contributing to Cartographer's ROS integration
-at `our Contribution page`_.
-
-.. _our Contribution page: https://github.com/googlecartographer/cartographer_ros/blob/master/CONTRIBUTING.md
-
-.. |build| image:: https://travis-ci.org/googlecartographer/cartographer_ros.svg?branch=master
-    :alt: Build Status
-    :scale: 100%
-    :target: https://travis-ci.org/googlecartographer/cartographer_ros
-.. |docs| image:: https://readthedocs.org/projects/google-cartographer-ros/badge/?version=latest
-    :alt: Documentation Status
-    :scale: 100%
-    :target: https://google-cartographer-ros.readthedocs.io/en/latest/?badge=latest
-.. |license| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
-     :alt: Apache 2 license.
-     :scale: 100%
-     :target: https://github.com/googlecartographer/cartographer_ros/blob/master/LICENSE
 
