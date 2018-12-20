@@ -26,9 +26,6 @@
   <param name="robot_description"
     textfile="$(find cartographer_ros)/urdf/roboy.urdf" />
 
-  <!--<remap from="echoes" to="horizontal_laser_2d"/>-->
-  <remap from="scan" to="scan"/>
-
   <include file="$(find cartographer_ros)/launch/offline_node.launch">
     <arg name="bag_filenames" value="$(arg bag_filenames)"/>
     <arg name="no_rviz" value="$(arg no_rviz)"/>
