@@ -17,8 +17,8 @@
 <launch>
   <arg name="bag_filenames"/>
   <arg name="no_rviz" default="true"/>
-  <!--<arg name="no_rviz" default="false"/>
-  <arg name="rviz_config" default="$(find cartographer_ros)/configuration_files/demo_2d.rviz"/>-->
+  <!--<arg name="no_rviz" default="false"/>-->
+  <arg name="rviz_config" default="$(find cartographer_ros)/configuration_files/demo_2d.rviz"/>
   <arg name="configuration_directory" default="$(find cartographer_ros)/configuration_files"/>
   <arg name="configuration_basenames" default="roboy_indoor.lua"/>
   <arg name="urdf_filenames" default="$(find cartographer_ros)/urdf/roboy.urdf"/>
