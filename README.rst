@@ -37,6 +37,37 @@ Getting started
 .. _our Read the Docs site: https://google-cartographer-ros.readthedocs.io
 .. _creating an issue: https://github.com/googlecartographer/cartographer_ros/issues/new?labels=question
 
+Building Cartographer
+=====================
+::
+
+	sudo apt-get install -y python-wstool python-rosdep ninja-build
+	sudo apt-get install ros-kinetic-abseil-cpp
+
+go to /catkin_ws/
+
+::
+
+	wstool init src
+	wstool merge -t src https://raw.githubusercontent.com/Roboy/cartographer_ros/roboy/cartographer_ros.rosinstall
+	wstool update -t src
+
+::
+
+	src/cartographer/scripts/install_proto3.sh
+	sudo rosdep init
+	rosdep update
+	rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y
+
+::
+
+	catkin build
+
+To be able to run pure localization::
+
+	cd src/cartographer/
+	git checkout master
+
 Documentation
 =============
 PDF containing `Google Cartographer_ROS documentation`_ .
