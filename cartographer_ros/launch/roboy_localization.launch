@@ -17,7 +17,7 @@
 <launch>
 
   <param name="robot_description"
-    textfile="$(find cartographer_ros)/urdf/roboy_self.urdf" />
+    textfile="$(find cartographer_ros)/urdf/roboy.urdf" />
 
   <node name="robot_state_publisher" pkg="robot_state_publisher"
     type="robot_state_publisher" />
@@ -28,7 +28,6 @@
           -configuration_basename roboy_localization.lua
           -load_state_filename $(arg load_state_filename)"
       output="screen">
-    <!--<remap from="echoes" to="horizontal_laser_2d" />-->
   </node>
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
