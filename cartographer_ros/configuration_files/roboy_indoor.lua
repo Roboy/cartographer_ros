@@ -44,7 +44,7 @@ options = {
 }
 
 MAP_BUILDER.use_trajectory_builder_2d = true
-MAP_BUILDER.num_background_threads = 3
+MAP_BUILDER.num_background_threads = 28
 
 -- -- INPUT DATA -- --
 TRAJECTORY_BUILDER_2D.min_range = 1
