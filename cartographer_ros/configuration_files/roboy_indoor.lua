@@ -93,7 +93,7 @@ POSE_GRAPH.constraint_builder.sampling_ratio = 0.05
 
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 6
 
-POSE_GRAPH.constraint_builder.min_score = 0.6
+POSE_GRAPH.constraint_builder.min_score = 0.4
 
 --POSE_GRAPH.constraint_builder.ceres_scan_matcher
 
