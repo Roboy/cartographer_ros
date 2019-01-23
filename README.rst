@@ -65,7 +65,7 @@ go to /catkin_ws/
 
 ::
 
-	catkin build
+	catkin build cartographer_rviz
 
 
 To be able to run Roboys' code::
