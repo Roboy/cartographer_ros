@@ -50,7 +50,7 @@ MAP_BUILDER.num_background_threads = 28
 TRAJECTORY_BUILDER_2D.min_range = 1
 TRAJECTORY_BUILDER_2D.max_range = 25
 
-TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 20
+TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 10
 
 TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05
 TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 3
