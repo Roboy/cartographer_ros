@@ -76,7 +76,7 @@ TRAJECTORY_BUILDER_2D.motion_filter.max_time_seconds = 1.
 TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.05
 TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(10.0)
 
-TRAJECTORY_BUILDER_2D.submaps.num_range_data = 15
+TRAJECTORY_BUILDER_2D.submaps.num_range_data = 10
 --TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
 
 -- TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.grid_type = 
