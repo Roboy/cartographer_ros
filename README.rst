@@ -65,17 +65,14 @@ go to /catkin_ws/
 
 ::
 
-	catkin build
+	catkin build cartographer_rviz
 
-To be able to run pure localization::
-
-	cd src/cartographer/
-	git checkout master
 
 To be able to run Roboys' code::
 
 	cd src/cartographer_ros/
 	git checkout roboy
+
 
 Some useful syntax
 ==================
