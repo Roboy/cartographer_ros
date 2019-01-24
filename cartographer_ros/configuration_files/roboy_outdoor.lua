@@ -57,7 +57,7 @@ TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_s
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 1e-8
 
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
-TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 2
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 1
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window = math.rad(10.0)
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 0.5
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 0.5
