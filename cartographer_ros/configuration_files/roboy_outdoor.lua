@@ -35,7 +35,7 @@ MAP_BUILDER.num_background_threads = 28
  TRAJECTORY_BUILDER_2D.use_imu_data = false
 
 TRAJECTORY_BUILDER_2D.min_range = 1
-TRAJECTORY_BUILDER_2D.max_range = 40
+TRAJECTORY_BUILDER_2D.max_range = 30
 
 TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 20
 
