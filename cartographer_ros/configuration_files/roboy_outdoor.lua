@@ -35,7 +35,7 @@ MAP_BUILDER.num_background_threads = 28
  TRAJECTORY_BUILDER_2D.use_imu_data = false
 
 TRAJECTORY_BUILDER_2D.min_range = 0.25
-TRAJECTORY_BUILDER_2D.max_range = 25
+TRAJECTORY_BUILDER_2D.max_range = 30
 
 TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 100
 
@@ -55,7 +55,7 @@ TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 80
 
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.5
-TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window = math.rad(60.0)
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window = math.rad(45.0)
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 1e-2
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 1e-1
 
@@ -70,7 +70,7 @@ POSE_GRAPH.constraint_builder.min_score = 0.5
 POSE_GRAPH.constraint_builder.max_constraint_distance = 15
 
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 20
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(60.0)
+POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(30.0)
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.1
 
