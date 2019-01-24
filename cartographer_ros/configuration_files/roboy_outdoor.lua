@@ -64,9 +64,9 @@ TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.05
 TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(1.0)
 
 -- -- GLOBAL -- --
-POSE_GRAPH.optimize_every_n_nodes = 25
+POSE_GRAPH.optimize_every_n_nodes = 100
 
-POSE_GRAPH.constraint_builder.min_score = 0.5
+POSE_GRAPH.constraint_builder.min_score = 0.4
 POSE_GRAPH.constraint_builder.max_constraint_distance = 15
 
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 20
