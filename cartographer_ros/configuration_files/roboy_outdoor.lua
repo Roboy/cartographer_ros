@@ -43,9 +43,9 @@ TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 20
 --TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 3
 --TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
 
-TRAJECTORY_BUILDER_2D.motion_filter.max_time_seconds = 1
-TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.1
-TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(5.0)
+--TRAJECTORY_BUILDER_2D.motion_filter.max_time_seconds = 1
+--TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.1
+--TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(5.0)
 
 -- -- LOCAL -- --
 TRAJECTORY_BUILDER_2D.submaps.num_range_data = 10
