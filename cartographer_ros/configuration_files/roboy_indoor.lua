@@ -62,7 +62,6 @@ TRAJECTORY_BUILDER_2D.use_imu_data = false
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = true
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads = 28
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.max_num_iterations = 20
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads = 28
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 1e-7
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 1e-8
 
