@@ -77,7 +77,7 @@ POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
 
 POSE_GRAPH.constraint_builder.max_constraint_distance = 12
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 40
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(45.0)
+POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(25.0)
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 10
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.003
