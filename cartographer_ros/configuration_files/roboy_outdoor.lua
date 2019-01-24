@@ -37,14 +37,14 @@ MAP_BUILDER.num_background_threads = 28
 TRAJECTORY_BUILDER_2D.min_range = 0.5
 TRAJECTORY_BUILDER_2D.max_range = 50
 
-TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 100
+TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 50
 
 --TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05
 --TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 3
 --TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
 
 -- -- LOCAL -- --
-TRAJECTORY_BUILDER_2D.submaps.num_range_data = 3
+TRAJECTORY_BUILDER_2D.submaps.num_range_data = 6
 
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = true
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads = 28
