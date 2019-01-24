@@ -1,17 +1,3 @@
--- Copyright 2016 The Cartographer Authors
---
--- Licensed under the Apache License, Version 2.0 (the "License");
--- you may not use this file except in compliance with the License.
--- You may obtain a copy of the License at
---
---      http://www.apache.org/licenses/LICENSE-2.0
---
--- Unless required by applicable law or agreed to in writing, software
--- distributed under the License is distributed on an "AS IS" BASIS,
--- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
--- See the License for the specific language governing permissions and
--- limitations under the License.
-
 include "map_builder.lua"
 include "trajectory_builder.lua"
 
@@ -24,7 +10,6 @@ options = {
   odom_frame = "odom",
   provide_odom_frame = true,
   publish_frame_projected_to_2d = false,
-  --use_pose_extrapolator = true,
   use_odometry = false,
   use_nav_sat = false,
   use_landmarks = false,
@@ -47,19 +32,22 @@ MAP_BUILDER.use_trajectory_builder_2d = true
 MAP_BUILDER.num_background_threads = 28
 
 -- -- INPUT DATA -- --
---TRAJECTORY_BUILDER_2D.min_range = 1
---TRAJECTORY_BUILDER_2D.max_range = 25
+ TRAJECTORY_BUILDER_2D.use_imu_data = false
 
-TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 10
+TRAJECTORY_BUILDER_2D.min_range = 1
+TRAJECTORY_BUILDER_2D.max_range = 50
+
+TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 20
 
 --TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05
 --TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 3
 --TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
 
- TRAJECTORY_BUILDER_2D.use_imu_data = false
 
 
 -- -- LOCAL -- --
+TRAJECTORY_BUILDER_2D.submaps.num_range_data = 10
+
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = true
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.max_num_iterations = 20
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads = 3
@@ -75,9 +63,6 @@ TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 10
 --TRAJECTORY_BUILDER_2D.motion_filter.max_time_seconds = 1.
 --TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.05
 --TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(5.0)
-
-TRAJECTORY_BUILDER_2D.submaps.num_range_data = 10
---TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
 
 -- TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.grid_type = 
 
