@@ -51,7 +51,7 @@ TRAJECTORY_BUILDER_2D.max_range = 25
 
 TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 20
 
-TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05
+TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.1
 TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 10
 --TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
 
