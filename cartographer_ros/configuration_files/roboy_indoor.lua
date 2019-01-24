@@ -29,7 +29,7 @@ options = {
   use_landmarks = false,
   num_laser_scans = 1,
   num_multi_echo_laser_scans = 0,
-  num_subdivisions_per_laser_scan = 10,
+  num_subdivisions_per_laser_scan = 25,
   num_point_clouds = 0,
   lookup_transform_timeout_sec = 0.2,
   submap_publish_period_sec = 0.3,
@@ -49,7 +49,7 @@ MAP_BUILDER.num_background_threads = 28
 TRAJECTORY_BUILDER_2D.min_range = 1
 TRAJECTORY_BUILDER_2D.max_range = 25
 
-TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 20
+TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 25
 
 TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05
 TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 3
