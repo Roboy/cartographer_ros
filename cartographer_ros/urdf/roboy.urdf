@@ -26,9 +26,19 @@
     <visual>
       <origin xyz="0 0 0" />
       <geometry>
-        <cylinder length="0.05" radius="0.03" />
+        <cylinder length="0.05" radius="0.045" />
       </geometry>
       <material name="gray" />
+    </visual>
+  </link>
+
+  <link name="imu_link">
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.02" />
+      </geometry>
+      <material name="orange" />
     </visual>
   </link>
 
@@ -37,6 +47,13 @@
   <joint name="laser_joint" type="fixed">
     <parent link="base_link" />
     <child link="laser" />
-    <origin xyz="0.1007 0 0.0558" />
+    <origin xyz="0.1550 0 -0.0200" />
   </joint>
+
+  <joint name="imu_link_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="imu_link" />
+    <origin xyz="0.0 0 0.0" />
+  </joint>
+
 </robot>
