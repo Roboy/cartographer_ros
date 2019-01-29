@@ -32,7 +32,7 @@
     </visual>
   </link>
 
-  <link name="imu_link">
+  <link name="imu">
     <visual>
       <origin xyz="0 0 0" />
       <geometry>
@@ -50,9 +50,9 @@
     <origin xyz="0.1550 0 -0.0200" />
   </joint>
 
-  <joint name="imu_link_joint" type="fixed">
+  <joint name="imu_joint" type="fixed">
     <parent link="base_link" />
-    <child link="imu_link" />
+    <child link="imu" />
     <origin xyz="0.0 0 0.0" />
   </joint>
 
