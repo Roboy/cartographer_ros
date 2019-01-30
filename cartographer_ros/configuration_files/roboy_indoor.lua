@@ -79,7 +79,7 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_dep
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.003
 
-POSE_GRAPH.constraint_builder.min_score = 0.6
+POSE_GRAPH.constraint_builder.min_score = 0.55
 
 --POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e-8
 --POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e-8
