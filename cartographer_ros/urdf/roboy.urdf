@@ -24,7 +24,7 @@
 
   <link name="laser">
     <visual>
-      <origin xyz="0 0 0" />
+      <origin xyz="-1e-5 -1e-5 -1e-5" />
       <geometry>
         <cylinder length="0.05" radius="0.045" />
       </geometry>
@@ -53,7 +53,7 @@
   <joint name="imu_joint" type="fixed">
     <parent link="base_link" />
     <child link="imu" />
-    <origin xyz="-1e-5 -1e-5 -1e-5" />
+    <origin xyz="0 0 0" />
   </joint>
 
 </robot>
