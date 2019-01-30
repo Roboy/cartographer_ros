@@ -33,7 +33,7 @@ MAP_BUILDER.num_background_threads = 28
 
 -- -- INPUT DATA -- --
 TRAJECTORY_BUILDER_2D.min_range = 0.25
-TRAJECTORY_BUILDER_2D.max_range = 30
+TRAJECTORY_BUILDER_2D.max_range = 50
 
 TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 20
 
@@ -49,7 +49,7 @@ TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_s
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads = 28
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.max_num_iterations = 20
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 5
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 80
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 200
 
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.2
@@ -70,7 +70,7 @@ TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
 
 
 -- -- GLOBAL -- --
-POSE_GRAPH.optimize_every_n_nodes = 100
+POSE_GRAPH.optimize_every_n_nodes = 0
 
 POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_threads = 28
 POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
@@ -82,7 +82,7 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_dep
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.003
 
-POSE_GRAPH.constraint_builder.min_score = 0.35
+POSE_GRAPH.constraint_builder.min_score = 0.60
 
 --POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e-8
 --POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e-8
