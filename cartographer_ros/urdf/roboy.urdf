@@ -34,7 +34,7 @@
 
   <link name="imu">
     <visual>
-      <origin xyz="0 0 0" />
+      <origin xyz="-0 -0 -0" />
       <geometry>
         <box size="0.05 0.05 0.02" />
       </geometry>
@@ -53,7 +53,7 @@
   <joint name="imu_joint" type="fixed">
     <parent link="base_link" />
     <child link="imu" />
-    <origin xyz="0.0 0 0.0" />
+    <origin xyz="0 0 0" />
   </joint>
 
 </robot>
