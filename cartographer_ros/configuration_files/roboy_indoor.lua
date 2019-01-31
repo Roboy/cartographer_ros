@@ -90,7 +90,7 @@ POSE_GRAPH.constraint_builder.min_score = 0.65 --0.68
 
 POSE_GRAPH.optimization_problem.huber_scale = 1e3
 POSE_GRAPH.optimization_problem.acceleration_weight = 1e5
-POSE_GRAPH.optimization_problem.rotation_weight = 3e5
+POSE_GRAPH.optimization_problem.rotation_weight = 3e3
 
 POSE_GRAPH.max_num_final_iterations = 10
 
