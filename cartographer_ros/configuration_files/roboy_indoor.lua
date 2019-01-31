@@ -62,7 +62,7 @@ TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.05
 TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(1.0)
 
 TRAJECTORY_BUILDER_2D.submaps.num_range_data = 12
-TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
+TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.05
 
 --TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
 
@@ -89,8 +89,8 @@ POSE_GRAPH.constraint_builder.min_score = 0.65 --0.68
 --POSE_GRAPH.optimization_problem.ceres_solver_options
 
 POSE_GRAPH.optimization_problem.huber_scale = 1e3
-POSE_GRAPH.optimization_problem.acceleration_weight = 1e10
-POSE_GRAPH.optimization_problem.rotation_weight = 3e10
+POSE_GRAPH.optimization_problem.acceleration_weight = 1e5
+POSE_GRAPH.optimization_problem.rotation_weight = 3e5
 
 POSE_GRAPH.max_num_final_iterations = 10
 
