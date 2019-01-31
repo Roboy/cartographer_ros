@@ -33,7 +33,7 @@ MAP_BUILDER.num_background_threads = 28
 
 -- -- INPUT DATA -- --
 TRAJECTORY_BUILDER_2D = {
-  use_imu_data = true,
+  use_imu_data = false,
   min_range = 0.25,
   max_range = 30.,
   --min_z = -0.8,
