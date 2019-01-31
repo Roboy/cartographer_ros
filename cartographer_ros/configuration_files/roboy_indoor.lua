@@ -55,13 +55,13 @@ TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.2
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window = math.rad(20.0)
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 1e-5
---TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 1e-5
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 1e-1
 
 TRAJECTORY_BUILDER_2D.motion_filter.max_time_seconds = 5.
 TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.05
-TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(5.0)
+TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(1.0)
 
-TRAJECTORY_BUILDER_2D.submaps.num_range_data = 15
+TRAJECTORY_BUILDER_2D.submaps.num_range_data = 12
 TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
 
 --TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
