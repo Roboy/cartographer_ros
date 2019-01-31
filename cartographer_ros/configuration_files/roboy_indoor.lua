@@ -41,7 +41,7 @@ TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.1
 TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 10
 --TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
 
-TRAJECTORY_BUILDER_2D.use_imu_data = true
+TRAJECTORY_BUILDER_2D.use_imu_data = false
 
 
 -- -- LOCAL -- --
