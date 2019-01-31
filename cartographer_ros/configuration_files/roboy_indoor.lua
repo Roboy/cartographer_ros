@@ -67,29 +67,61 @@ TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
 --TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
 
 -- -- GLOBAL -- --
-POSE_GRAPH.optimize_every_n_nodes = 0
-
-POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_threads = 28
-POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
-
-POSE_GRAPH.constraint_builder.max_constraint_distance = 5
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 100
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(180.0)
---POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 20
-
-POSE_GRAPH.constraint_builder.sampling_ratio = 0.1
-
-POSE_GRAPH.constraint_builder.min_score = 0.45
---for large arease use .7, there are constraints above that number
-
---POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e-8
---POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e-8
---POSE_GRAPH.matcher_translation_weight = 1e-8
---POSE_GRAPH.matcher_rotation_weight = 1e-8
---POSE_GRAPH.optimization_problem.*_weight
---POSE_GRAPH.optimization_problem.ceres_solver_options
-
-POSE_GRAPH.max_num_final_iterations = 10
+POSE_GRAPH = {
+  optimize_every_n_nodes = 100,
+  constraint_builder = {
+    --sampling_ratio = 0.3,
+    max_constraint_distance = 10.0,
+    min_score = 0.68,
+    --global_localization_min_score = 0.6,
+    --loop_closure_translation_weight = 1.1e4,
+    --loop_closure_rotation_weight = 1e5,
+    --log_matches = true,
+    fast_correlative_scan_matcher = {
+      linear_search_window = 100,
+      angular_search_window = math.rad(90.),
+      --branch_and_bound_depth = 10,
+    },
+    ceres_scan_matcher = {
+      --occupied_space_weight = 20.,
+      --translation_weight = 10.,
+      --rotation_weight = 1.,
+      ceres_solver_options = {
+        --use_nonmonotonic_steps = true,
+        --max_num_iterations = 10,
+        --num_threads = 28,
+      },
+    },
+  },
+  --matcher_translation_weight = 5e2,
+  --matcher_rotation_weight = 1.6e3,
+  optimization_problem = {
+    --huber_scale = 1e1,
+    --acceleration_weight = 1e3,
+    --rotation_weight = 3e5,
+    --local_slam_pose_translation_weight = 1e5,
+    --local_slam_pose_rotation_weight = 1e5,
+    --odometry_translation_weight = 1e5,
+    --odometry_rotation_weight = 1e5,
+    --fixed_frame_pose_translation_weight = 1e1,
+    --fixed_frame_pose_rotation_weight = 1e2,
+    --log_solver_summary = false,
+    --ceres_solver_options = {
+      --use_nonmonotonic_steps = false,
+      --max_num_iterations = 50,
+      num_threads = 28,
+    --},
+  },
+  max_num_final_iterations = 10,
+  --global_sampling_ratio = 0.003,
+  --log_residual_histograms = true,
+  --global_constraint_search_after_n_seconds = 10.,
+  overlapping_submaps_trimmer_2d = {
+  --    fresh_submaps_count = 1,
+  --    min_covered_area = 2,
+  --    min_added_submaps_count = 5,
+  --  },
+}
 
 return options
 
