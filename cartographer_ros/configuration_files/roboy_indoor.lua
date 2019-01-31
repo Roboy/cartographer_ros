@@ -38,7 +38,7 @@ TRAJECTORY_BUILDER_2D = {
   max_range = 30.,
   --min_z = -0.8,
   --max_z = 2.,
-  --missing_data_ray_length = 5.,
+  missing_data_ray_length = 50., --5,
   num_accumulated_range_data = 20,
   voxel_filter_size = 0.1, --0.025,
   adaptive_voxel_filter = {
@@ -48,10 +48,11 @@ TRAJECTORY_BUILDER_2D = {
   },
   motion_filter = {
     --max_time_seconds = 5.,
-    max_distance_meters = 0.1,
+    max_distance_meters = 0.1, --0.2, 
     --max_angle_radians = math.rad(1.),
   },
 },
+
 -- -- LOCAL -- --
 TRAJECTORY_BUILDER_2D = {
   loop_closure_adaptive_voxel_filter = {
@@ -69,7 +70,7 @@ TRAJECTORY_BUILDER_2D = {
   ceres_scan_matcher = {
     --occupied_space_weight = 1.,
     translation_weight = 20, --10.,
-    rotation_weight = 2e4, --40.,
+    rotation_weight = 2e5, --40.,
     ceres_solver_options = {
       use_nonmonotonic_steps = true,
       --max_num_iterations = 20,
@@ -165,6 +166,3 @@ POSE_GRAPH = {
 }
 
 return options
-
-
-
