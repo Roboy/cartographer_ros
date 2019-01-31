@@ -34,13 +34,13 @@ MAP_BUILDER.num_background_threads = 28
 -- -- INPUT DATA -- --
 TRAJECTORY_BUILDER_2D = {
   use_imu_data = true,
-  min_range = 0.,
+  min_range = 0.25,
   max_range = 30.,
   --min_z = -0.8,
   --max_z = 2.,
-  missing_data_ray_length = 1., --5,
+  --missing_data_ray_length = 5., --5,
   num_accumulated_range_data = 20,
-  voxel_filter_size = 0.1, --0.025,
+  --voxel_filter_size = 0.1, --0.025,
   adaptive_voxel_filter = {
     max_length = 10, --0.5, 
     --min_num_points = 70 --200,
@@ -48,7 +48,7 @@ TRAJECTORY_BUILDER_2D = {
   },
   motion_filter = {
     --max_time_seconds = 5.,
-    max_distance_meters = 0.1, --0.2, 
+    max_distance_meters = 0.05, --0.2, 
     --max_angle_radians = math.rad(1.),
   },
 }
@@ -70,14 +70,14 @@ TRAJECTORY_BUILDER_2D = {
   ceres_scan_matcher = {
     --occupied_space_weight = 1.,
     translation_weight = 20, --10.,
-    rotation_weight = 2e5, --40.,
+    rotation_weight = 2e3, --40.,
     ceres_solver_options = {
       use_nonmonotonic_steps = true,
       --max_num_iterations = 20,
       num_threads = 28,
     },
   },
-  imu_gravity_time_constant = 10.,
+  --imu_gravity_time_constant = 10.,
   submaps = {
     num_range_data = 12, --90,
     grid_options_2d = {
@@ -110,7 +110,7 @@ TRAJECTORY_BUILDER_2D = {
 
 -- -- GLOBAL -- --
 POSE_GRAPH = {
-  optimize_every_n_nodes = 100,
+  optimize_every_n_nodes = 0,
   constraint_builder = {
     --sampling_ratio = 0.3,
     max_constraint_distance = 10.0,
