@@ -59,7 +59,7 @@ TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window =
 
 TRAJECTORY_BUILDER_2D.motion_filter.max_time_seconds = 5.
 TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.05
-TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(5.0)
+TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(1.0)
 
 TRAJECTORY_BUILDER_2D.submaps.num_range_data = 10
 TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
