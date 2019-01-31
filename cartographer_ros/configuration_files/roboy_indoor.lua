@@ -110,7 +110,7 @@ POSE_GRAPH = {
       --use_nonmonotonic_steps = false,
       --max_num_iterations = 50,
       num_threads = 28,
-    --},
+    },
   },
   max_num_final_iterations = 10,
   --global_sampling_ratio = 0.003,
@@ -120,7 +120,7 @@ POSE_GRAPH = {
   --    fresh_submaps_count = 1,
   --    min_covered_area = 2,
   --    min_added_submaps_count = 5,
-  --  },
+  },
 }
 
 return options
