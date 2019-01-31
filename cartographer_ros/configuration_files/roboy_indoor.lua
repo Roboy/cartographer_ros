@@ -51,7 +51,7 @@ TRAJECTORY_BUILDER_2D = {
     max_distance_meters = 0.1, --0.2, 
     --max_angle_radians = math.rad(1.),
   },
-},
+}
 
 -- -- LOCAL -- --
 TRAJECTORY_BUILDER_2D = {
@@ -106,7 +106,7 @@ TRAJECTORY_BUILDER_2D = {
       },
     },
   },
-},
+}
 
 -- -- GLOBAL -- --
 POSE_GRAPH = {
