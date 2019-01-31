@@ -88,7 +88,7 @@ POSE_GRAPH.constraint_builder.min_score = 0.65 --0.68
 --POSE_GRAPH.matcher_rotation_weight = 1e-8
 --POSE_GRAPH.optimization_problem.ceres_solver_options
 
-POSE_GRAPH.optimization_problem.huber_scale = 1e1
+POSE_GRAPH.optimization_problem.huber_scale = 1e3
 POSE_GRAPH.optimization_problem.acceleration_weight = 1e10
 POSE_GRAPH.optimization_problem.rotation_weight = 3e10
 
