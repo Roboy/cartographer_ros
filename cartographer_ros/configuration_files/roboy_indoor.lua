@@ -32,39 +32,80 @@ MAP_BUILDER.use_trajectory_builder_2d = true
 MAP_BUILDER.num_background_threads = 28
 
 -- -- INPUT DATA -- --
-TRAJECTORY_BUILDER_2D.min_range = 0.25
-TRAJECTORY_BUILDER_2D.max_range = 30
-
-TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 20
-
-TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.1
-TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 10
---TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
-
-TRAJECTORY_BUILDER_2D.use_imu_data = true
-
-
+TRAJECTORY_BUILDER_2D = {
+  use_imu_data = true,
+  min_range = 0.,
+  max_range = 30.,
+  --min_z = -0.8,
+  --max_z = 2.,
+  --missing_data_ray_length = 5.,
+  num_accumulated_range_data = 20,
+  voxel_filter_size = 0.1, --0.025,
+  adaptive_voxel_filter = {
+    max_length = 10, --0.5, 
+    --min_num_points = 70 --200,
+    --max_range = 50.,
+  },
+  motion_filter = {
+    --max_time_seconds = 5.,
+    max_distance_meters = 0.1,
+    --max_angle_radians = math.rad(1.),
+  },
+},
 -- -- LOCAL -- --
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = true
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads = 28
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.max_num_iterations = 30
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 20
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 2000
-
-TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
-TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.2
-TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window = math.rad(20.0)
---TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 1e-5
-TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 1e-1
-
-TRAJECTORY_BUILDER_2D.motion_filter.max_time_seconds = 5.
-TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.05
-TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(1.0)
-
-TRAJECTORY_BUILDER_2D.submaps.num_range_data = 12
-TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
-
---TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
+TRAJECTORY_BUILDER_2D = {
+  loop_closure_adaptive_voxel_filter = {
+    --max_length = 0.1,
+    --min_num_points = 100,
+    --max_range = 50.,
+  },
+  use_online_correlative_scan_matching = true,
+  real_time_correlative_scan_matcher = {
+    linear_search_window = 0.2, --0.1,
+    angular_search_window = math.rad(20.),
+    --translation_delta_cost_weight = 1e-1,
+    --rotation_delta_cost_weight = 1e-1,
+  },
+  ceres_scan_matcher = {
+    --occupied_space_weight = 1.,
+    translation_weight = 20, --10.,
+    rotation_weight = 2e4, --40.,
+    ceres_solver_options = {
+      use_nonmonotonic_steps = true,
+      --max_num_iterations = 20,
+      num_threads = 28,
+    },
+  },
+  imu_gravity_time_constant = 10.,
+  submaps = {
+    num_range_data = 12, --90,
+    grid_options_2d = {
+      --grid_type = "PROBABILITY_GRID",
+      resolution = 01, --0.05,
+    },
+    range_data_inserter = {
+      --range_data_inserter_type = "PROBABILITY_GRID_INSERTER_2D",
+      probability_grid_range_data_inserter = {
+        --insert_free_space = true,
+        --hit_probability = 0.55,
+        --miss_probability = 0.49,
+      },
+      tsdf_range_data_inserter = {
+        --truncation_distance = 0.3,
+        --maximum_weight = 10.,
+        --update_free_space = false,
+        normal_estimation_options = {
+          --num_normal_samples = 4,
+          --sample_radius = 0.5,
+        },
+        --project_sdf_distance_to_scan_normal = true,
+        --update_weight_range_exponent = 0,
+        --update_weight_angle_scan_normal_to_ray_kernel_bandwidth = 0.5,
+        --update_weight_distance_cell_to_hit_kernel_bandwidth = 0.5,
+      },
+    },
+  },
+},
 
 -- -- GLOBAL -- --
 POSE_GRAPH = {
