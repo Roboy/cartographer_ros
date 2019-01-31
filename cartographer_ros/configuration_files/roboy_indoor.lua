@@ -67,14 +67,14 @@ TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
 --TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
 
 -- -- GLOBAL -- --
-POSE_GRAPH.optimize_every_n_nodes = 100
+POSE_GRAPH.optimize_every_n_nodes = 0
 
 POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_threads = 28
 POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
 
 POSE_GRAPH.constraint_builder.max_constraint_distance = 5
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 100
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(45.0)
+POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(180.0)
 --POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 20
 
 POSE_GRAPH.constraint_builder.sampling_ratio = 0.1
