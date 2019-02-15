@@ -67,15 +67,38 @@ TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
 --TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
 
 -- -- IMU -- --
+POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
+POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = true
 --POSE_GRAPH.optimization_problem.huber_scale = 1e3
-POSE_GRAPH.optimization_problem.acceleration_weight = 1e5
+
+POSE_GRAPH.optimization_problem.acceleration_weight = 1e1
 --POSE_GRAPH.optimization_problem.rotation_weight = 3e3
+
+--POSE_GRAPH.optimization_problem.fixed_frame_pose_translation_weight = 1e-3
+
+--  optimization_problem = {
+--    huber_scale = 1e1,
+--    acceleration_weight = 1e3,
+--    rotation_weight = 3e5,
+--    local_slam_pose_translation_weight = 1e5,
+--    local_slam_pose_rotation_weight = 1e5,
+--    odometry_translation_weight = 1e5,
+--    odometry_rotation_weight = 1e5,
+--    fixed_frame_pose_translation_weight = 1e1,
+--    fixed_frame_pose_rotation_weight = 1e2,
+--    log_solver_summary = false,
+--    use_online_imu_extrinsics_in_3d = true,
+--    fix_z_in_3d = false,
+--    ceres_solver_options = {
+--      use_nonmonotonic_steps = false,
+--      max_num_iterations = 50,
+--      num_threads = 7,
+--    },
 
 -- -- GLOBAL -- --
 POSE_GRAPH.optimize_every_n_nodes = 0
 
 POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_threads = 28
-POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
 
 POSE_GRAPH.constraint_builder.max_constraint_distance = 5
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 100
