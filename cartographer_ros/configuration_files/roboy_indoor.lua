@@ -41,9 +41,6 @@ TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 20
 TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 10
 --TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
 
-TRAJECTORY_BUILDER_2D.use_imu_data = true
-
-
 -- -- LOCAL -- --
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = true
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads = 28
@@ -67,6 +64,8 @@ TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
 --TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
 
 -- -- IMU -- --
+TRAJECTORY_BUILDER_2D.use_imu_data = false
+
 POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
 POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = true
 --POSE_GRAPH.optimization_problem.huber_scale = 1e3
