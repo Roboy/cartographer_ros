@@ -64,14 +64,16 @@ TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
 --TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
 
 -- -- IMU -- --
-TRAJECTORY_BUILDER_2D.use_imu_data = false
+TRAJECTORY_BUILDER_2D.use_imu_data = true
 
 POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
 POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = true
 --POSE_GRAPH.optimization_problem.huber_scale = 1e3
 
-POSE_GRAPH.optimization_problem.acceleration_weight = 1e1
-POSE_GRAPH.optimization_problem.rotation_weight = 3e7
+--POSE_GRAPH.optimization_problem.acceleration_weight = 1e0
+--POSE_GRAPH.optimization_problem.rotation_weight = 5e5
+POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e3
+--POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 
 
 --POSE_GRAPH.optimization_problem.fixed_frame_pose_translation_weight = 1e-3
 
