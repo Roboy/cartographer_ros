@@ -68,37 +68,29 @@ TRAJECTORY_BUILDER_2D.use_imu_data = true
 
 POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
 POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = true
---POSE_GRAPH.optimization_problem.huber_scale = 1e3
 
---POSE_GRAPH.optimization_problem.acceleration_weight = 1e0
---POSE_GRAPH.optimization_problem.rotation_weight = 5e5
-POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e3
---POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 
-
---POSE_GRAPH.optimization_problem.odometry_rotation_weight = 1e7
-
---POSE_GRAPH.optimization_problem.fixed_frame_pose_rotation_weight = 1e4
-
---POSE_GRAPH.optimization_problem.fixed_frame_pose_translation_weight = 1e-3
-
---  optimization_problem = {
 --    huber_scale = 1e1,
 --    acceleration_weight = 1e3,
 --    rotation_weight = 3e5,
+POSE_GRAPH.optimization_problem.huber_scale = 1e3
+--POSE_GRAPH.optimization_problem.acceleration_weight = 1e0
+--POSE_GRAPH.optimization_problem.rotation_weight = 5e5
+
 --    local_slam_pose_translation_weight = 1e5,
 --    local_slam_pose_rotation_weight = 1e5,
+--POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e3
+--POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 
+
 --    odometry_translation_weight = 1e5,
 --    odometry_rotation_weight = 1e5,
 --    fixed_frame_pose_translation_weight = 1e1,
 --    fixed_frame_pose_rotation_weight = 1e2,
---    log_solver_summary = false,
---    use_online_imu_extrinsics_in_3d = true,
---    fix_z_in_3d = false,
---    ceres_solver_options = {
---      use_nonmonotonic_steps = false,
---      max_num_iterations = 50,
---      num_threads = 7,
---    },
+--POSE_GRAPH.optimization_problem.odometry_translation_weight = 1e5
+--POSE_GRAPH.optimization_problem.odometry_rotation_weight = 1e7
+--POSE_GRAPH.optimization_problem.fixed_frame_pose_translation_weight = 1e-3
+--POSE_GRAPH.optimization_problem.fixed_frame_pose_rotation_weight = 1e4
+
+
 
 -- -- GLOBAL -- --
 POSE_GRAPH.optimize_every_n_nodes = 0
