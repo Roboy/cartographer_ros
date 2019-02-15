@@ -78,17 +78,17 @@ POSE_GRAPH.optimization_problem.rotation_weight = 5e5
 
 --    local_slam_pose_translation_weight = 1e5,
 --    local_slam_pose_rotation_weight = 1e5,
---POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e3
---POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 1e7
+POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e3
+POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 1e7
 
 --    odometry_translation_weight = 1e5,
 --    odometry_rotation_weight = 1e5,
 --    fixed_frame_pose_translation_weight = 1e1,
 --    fixed_frame_pose_rotation_weight = 1e2,
---POSE_GRAPH.optimization_problem.odometry_translation_weight = 1e3
---POSE_GRAPH.optimization_problem.odometry_rotation_weight = 1e7
---POSE_GRAPH.optimization_problem.fixed_frame_pose_translation_weight = 1e-3
---POSE_GRAPH.optimization_problem.fixed_frame_pose_rotation_weight = 1e4
+POSE_GRAPH.optimization_problem.odometry_translation_weight = 1e3
+POSE_GRAPH.optimization_problem.odometry_rotation_weight = 1e7
+POSE_GRAPH.optimization_problem.fixed_frame_pose_translation_weight = 1e-3
+POSE_GRAPH.optimization_problem.fixed_frame_pose_rotation_weight = 1e4
 
 
 
@@ -104,7 +104,7 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_windo
 
 POSE_GRAPH.constraint_builder.sampling_ratio = 0.1
 
-POSE_GRAPH.constraint_builder.min_score = 0.5 --0.68
+POSE_GRAPH.constraint_builder.min_score = 0.6 --0.68
 --for large arease use .7, there are constraints above that number
 
 --POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e-8
