@@ -104,18 +104,23 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_windo
 
 POSE_GRAPH.constraint_builder.sampling_ratio = 0.1
 
-POSE_GRAPH.constraint_builder.min_score = 0.65 --0.68
+POSE_GRAPH.constraint_builder.min_score = 0.62 --0.68
 --for large arease use .7, there are constraints above that number
 
 --POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e-8
 --POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e-8
 
+-- LOOP CLOSURE --
+
 --  matcher_translation_weight = 5e2,
 --  matcher_rotation_weight = 1.6e3,
 --POSE_GRAPH.matcher_translation_weight = 1e-8
 --POSE_GRAPH.matcher_rotation_weight = 1e-8
---POSE_GRAPH.optimization_problem.ceres_solver_options
 
+--    loop_closure_translation_weight = 1.1e4,
+--    loop_closure_rotation_weight = 1e5,
+-- POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 
+-- POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 
 
 
 POSE_GRAPH.max_num_final_iterations = 10
