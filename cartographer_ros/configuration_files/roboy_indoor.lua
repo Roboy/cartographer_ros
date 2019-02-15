@@ -93,7 +93,7 @@ POSE_GRAPH.optimization_problem.rotation_weight = 5e5
 
 
 -- -- GLOBAL -- --
-POSE_GRAPH.optimize_every_n_nodes = 0
+POSE_GRAPH.optimize_every_n_nodes = 25
 
 POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_threads = 28
 
