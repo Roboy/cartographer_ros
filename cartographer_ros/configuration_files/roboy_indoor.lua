@@ -75,7 +75,9 @@ POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = tr
 --POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e3
 --POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 
 
-POSE_GRAPH.optimization_problem.odometry_rotation_weight = 1e7
+--POSE_GRAPH.optimization_problem.odometry_rotation_weight = 1e7
+
+POSE_GRAPH.optimization_problem.fixed_frame_pose_rotation_weight = 1e4
 
 --POSE_GRAPH.optimization_problem.fixed_frame_pose_translation_weight = 1e-3
 
