@@ -68,7 +68,7 @@ TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
 
 -- -- IMU -- --
 --POSE_GRAPH.optimization_problem.huber_scale = 1e3
---POSE_GRAPH.optimization_problem.acceleration_weight = 1e5
+POSE_GRAPH.optimization_problem.acceleration_weight = 1e5
 --POSE_GRAPH.optimization_problem.rotation_weight = 3e3
 
 -- -- GLOBAL -- --
