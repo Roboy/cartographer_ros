@@ -72,7 +72,7 @@ POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = tr
 --POSE_GRAPH.optimization_problem.huber_scale = 1e3
 
 POSE_GRAPH.optimization_problem.acceleration_weight = 1e1
---POSE_GRAPH.optimization_problem.rotation_weight = 3e3
+POSE_GRAPH.optimization_problem.rotation_weight = 3e7
 
 --POSE_GRAPH.optimization_problem.fixed_frame_pose_translation_weight = 1e-3
 
