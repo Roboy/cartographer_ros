@@ -122,6 +122,6 @@ POSE_GRAPH.matcher_rotation_weight = 1e2
 -- POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 
 
 
-POSE_GRAPH.max_num_final_iterations = 10
+-- POSE_GRAPH.max_num_final_iterations = 10
 
 return options
