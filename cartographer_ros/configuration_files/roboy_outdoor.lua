@@ -32,63 +32,66 @@ MAP_BUILDER.use_trajectory_builder_2d = true
 MAP_BUILDER.num_background_threads = 28
 
 -- -- INPUT DATA -- --
- TRAJECTORY_BUILDER_2D.use_imu_data = false
-
 TRAJECTORY_BUILDER_2D.min_range = 0.25
-TRAJECTORY_BUILDER_2D.max_range = 30
+TRAJECTORY_BUILDER_2D.max_range = 25
 
-TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 100
+TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 20
 
---TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.025
---TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_range = 200
---TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 5
---TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 200
+--TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.1
+TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 10
+--TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
+
+TRAJECTORY_BUILDER_2D.use_imu_data = true
+
 
 -- -- LOCAL -- --
-TRAJECTORY_BUILDER_2D.submaps.num_range_data = 3
-
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = true
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads = 28
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.max_num_iterations = 20
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 5
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 80
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.max_num_iterations = 30
+--TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 5 --20
+--TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 2e3 --80
 
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
-TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.2
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.1
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window = math.rad(20.0)
---TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 1e-2
---TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 1e-1
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 1e-3
+--TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 1e-3
 
-TRAJECTORY_BUILDER_2D.motion_filter.max_time_seconds = 1
+--TRAJECTORY_BUILDER_2D.motion_filter.max_time_seconds = 1.
 TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.05
 TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(1.0)
 
+TRAJECTORY_BUILDER_2D.submaps.num_range_data = 12
+TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
+
+--TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
+
 -- -- GLOBAL -- --
-POSE_GRAPH.optimize_every_n_nodes = 100
-
-POSE_GRAPH.constraint_builder.min_score = 0.4
-POSE_GRAPH.constraint_builder.max_constraint_distance = 15
-
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 20
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(30.0)
-
---POSE_GRAPH.constraint_builder.sampling_ratio = 0.1
+POSE_GRAPH.optimize_every_n_nodes = 0
 
 POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_threads = 28
---POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 6
+POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
 
+POSE_GRAPH.constraint_builder.max_constraint_distance = 5
+POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 100
+POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(60.0)
+--POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 20
 
+POSE_GRAPH.constraint_builder.sampling_ratio = 0.1
+
+POSE_GRAPH.constraint_builder.min_score = 0.65 --0.68
+--for large arease use .7, there are constraints above that number
 
 --POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e-8
 --POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e-8
 --POSE_GRAPH.matcher_translation_weight = 1e-8
 --POSE_GRAPH.matcher_rotation_weight = 1e-8
---POSE_GRAPH.optimization_problem.*_weight
 --POSE_GRAPH.optimization_problem.ceres_solver_options
 
-POSE_GRAPH.max_num_final_iterations = 2
+POSE_GRAPH.optimization_problem.huber_scale = 1e3
+POSE_GRAPH.optimization_problem.acceleration_weight = 1e5
+POSE_GRAPH.optimization_problem.rotation_weight = 3e3
+
+POSE_GRAPH.max_num_final_iterations = 10
 
 return options
-
-
-
