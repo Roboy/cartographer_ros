@@ -78,7 +78,7 @@ POSE_GRAPH.optimization_problem.rotation_weight = 3e8
 
 --    local_slam_pose_translation_weight = 1e5,
 --    local_slam_pose_rotation_weight = 1e5,
---POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e5
+POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e4
 POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 1e4
 
 --    odometry_translation_weight = 1e5,
