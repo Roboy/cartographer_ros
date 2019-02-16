@@ -32,7 +32,7 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_windo
 
 POSE_GRAPH.constraint_builder.sampling_ratio = 0.5
 
-POSE_GRAPH.constraint_builder.min_score = 0.45 --0.68
+POSE_GRAPH.constraint_builder.min_score = 0.48 --0.68
 
 -- LOOP CLOSURE --
 
@@ -47,6 +47,6 @@ POSE_GRAPH.constraint_builder.min_score = 0.45 --0.68
 --POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e3
 
 
-POSE_GRAPH.max_num_final_iterations = 1
+POSE_GRAPH.max_num_final_iterations = 20
 
 return options
