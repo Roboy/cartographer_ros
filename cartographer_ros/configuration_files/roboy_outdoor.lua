@@ -73,8 +73,8 @@ POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = tr
 --    acceleration_weight = 1e3,
 --    rotation_weight = 3e5,
 --POSE_GRAPH.optimization_problem.huber_scale = 1e-1
---POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
---POSE_GRAPH.optimization_problem.rotation_weight = 3e8
+POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
+POSE_GRAPH.optimization_problem.rotation_weight = 3e8
 
 --    local_slam_pose_translation_weight = 1e5,
 --    local_slam_pose_rotation_weight = 1e5,
@@ -104,7 +104,7 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_windo
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.1
 
-POSE_GRAPH.constraint_builder.min_score = 0.45 --0.68
+POSE_GRAPH.constraint_builder.min_score = 0.48 --0.68
 
 -- LOOP CLOSURE --
 
