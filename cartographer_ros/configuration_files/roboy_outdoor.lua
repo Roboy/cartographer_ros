@@ -72,14 +72,14 @@ POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = tr
 --    huber_scale = 1e1,
 --    acceleration_weight = 1e3,
 --    rotation_weight = 3e5,
---POSE_GRAPH.optimization_problem.huber_scale = 1e3
+--POSE_GRAPH.optimization_problem.huber_scale = 1e2
 POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
 POSE_GRAPH.optimization_problem.rotation_weight = 3e8
 
 --    local_slam_pose_translation_weight = 1e5,
 --    local_slam_pose_rotation_weight = 1e5,
---POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e3
---POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 1e2
+--POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e5
+POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 1e4
 
 --    odometry_translation_weight = 1e5,
 --    odometry_rotation_weight = 1e5,
