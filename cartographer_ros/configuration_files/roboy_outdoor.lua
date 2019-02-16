@@ -43,7 +43,7 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_windo
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.1
 
-POSE_GRAPH.constraint_builder.min_score = 0.48 --0.68
+POSE_GRAPH.constraint_builder.min_score = 0.55 --0.68
 
 -- LOOP CLOSURE --
 
