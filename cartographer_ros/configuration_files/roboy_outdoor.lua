@@ -21,7 +21,7 @@ POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = tr
 --POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 5e5
 
 -- -- GLOBAL -- --
-POSE_GRAPH.optimize_every_n_nodes = 200
+POSE_GRAPH.optimize_every_n_nodes = 100
 
 POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_threads = 28
 
