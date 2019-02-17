@@ -32,13 +32,13 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_windo
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.5
 
-POSE_GRAPH.constraint_builder.min_score = 0.45 --0.44
+POSE_GRAPH.constraint_builder.min_score = 0.5 --0.44
 
 -- LOOP CLOSURE --
 
 --  matcher_translation_weight = 5e2,
 --  matcher_rotation_weight = 1.6e3,
-POSE_GRAPH.matcher_translation_weight = 3e2
+--POSE_GRAPH.matcher_translation_weight = 3e2
 POSE_GRAPH.matcher_rotation_weight = 1e3
 
 --    loop_closure_translation_weight = 1.1e4,
