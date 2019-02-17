@@ -39,12 +39,12 @@ POSE_GRAPH.constraint_builder.min_score = 0.5 --0.44
 --  matcher_translation_weight = 5e2,
 --  matcher_rotation_weight = 1.6e3,
 POSE_GRAPH.matcher_translation_weight = 2e2
-POSE_GRAPH.matcher_rotation_weight = 1.2e3
+POSE_GRAPH.matcher_rotation_weight = 1.3e3
 
 --    loop_closure_translation_weight = 1.1e4,
 --    loop_closure_rotation_weight = 1e5,
 --POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e5
---POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e4
+POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e6
 
 
 POSE_GRAPH.max_num_final_iterations = 20
