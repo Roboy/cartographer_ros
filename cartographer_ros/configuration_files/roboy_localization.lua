@@ -6,7 +6,7 @@ TRAJECTORY_BUILDER.pure_localization = true
 --}
 
 --POSE_GRAPH.constraint_builder.global_localization_min_score = 0.55
---POSE_GRAPH.constraint_builder.global_constraint_search_after_n_seconds = 0
+POSE_GRAPH.constraint_builder.global_constraint_search_after_n_seconds = 0
 --POSE_GRAPH.constraint_builder.min_score = 0.55
 
 --POSE_GRAPH.max_num_final_iterations = 1
