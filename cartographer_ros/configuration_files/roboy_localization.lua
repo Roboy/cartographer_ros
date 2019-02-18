@@ -5,6 +5,8 @@ TRAJECTORY_BUILDER.pure_localization = true
 --	max_submaps_to_keep = 3,
 --}
 
+TRAJECTORY_BUILDER_2D.submaps.num_range_data = 12
+
 POSE_GRAPH.constraint_builder.sampling_ratio = 1
 POSE_GRAPH.constraint_builder.global_localization_min_score = 0.45
 --POSE_GRAPH.constraint_builder.min_score = 0.55
