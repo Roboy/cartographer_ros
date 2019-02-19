@@ -69,7 +69,7 @@ TRAJECTORY_BUILDER_2D.submaps.num_range_data = 12
 
 
 -- -- GLOBAL -- --
-POSE_GRAPH.optimize_every_n_nodes = 25
+POSE_GRAPH.optimize_every_n_nodes = 50
 POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_threads = 28
 POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
 
