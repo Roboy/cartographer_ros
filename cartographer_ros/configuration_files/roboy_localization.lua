@@ -10,7 +10,7 @@ POSE_GRAPH.global_constraint_search_after_n_seconds = 6
 POSE_GRAPH.global_sampling_ratio = 0.005
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.5
 
-POSE_GRAPH.constraint_builder.global_localization_min_score = 0.30
+POSE_GRAPH.constraint_builder.global_localization_min_score = 0.25
 --POSE_GRAPH.constraint_builder.min_score = 0.4
 
 
