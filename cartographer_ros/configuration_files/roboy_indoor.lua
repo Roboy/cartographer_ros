@@ -55,7 +55,7 @@ TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 10 --20
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 2e3 --80
 
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = false
-TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.2
+TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.1
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window = math.rad(10.0)
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 0.01
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 0.01 
@@ -71,17 +71,17 @@ TRAJECTORY_BUILDER_2D.submaps.num_range_data = 12
 
 
 -- -- GLOBAL -- --
-POSE_GRAPH.optimize_every_n_nodes = 50
+POSE_GRAPH.optimize_every_n_nodes = 100
 POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_threads = 28
 POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
 
 POSE_GRAPH.constraint_builder.max_constraint_distance = 10
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 10
+POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 15
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(60.0)
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.05
 
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 6
+--POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 6
 
 POSE_GRAPH.constraint_builder.min_score = 0.65
 
