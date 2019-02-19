@@ -52,7 +52,7 @@ TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_s
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.max_num_iterations = 20
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads = 28
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 5 --20
---TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 2e3 --80
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 2e3 --80
 
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = false
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = 0.1
@@ -83,7 +83,7 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_windo
 
 --POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 6
 
-POSE_GRAPH.constraint_builder.min_score = 0.65
+POSE_GRAPH.constraint_builder.min_score = 0.6
 
 --POSE_GRAPH.constraint_builder.ceres_scan_matcher
 
