@@ -5,7 +5,7 @@ TRAJECTORY_BUILDER.pure_localization = true
 --	max_submaps_to_keep = 3,
 --}
 
-POSE_GRAPH.global_constraint_search_after_n_seconds = 5
+POSE_GRAPH.global_constraint_search_after_n_seconds = 7
 
 POSE_GRAPH.global_sampling_ratio = 0.008
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.5
