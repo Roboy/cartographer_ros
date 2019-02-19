@@ -73,7 +73,9 @@ TRAJECTORY_BUILDER_2D.submaps.num_range_data = 12
 -- -- GLOBAL -- --
 POSE_GRAPH.optimize_every_n_nodes = 100
 POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_threads = 28
+
 POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
+POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = true
 
 POSE_GRAPH.constraint_builder.max_constraint_distance = 10
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 15
