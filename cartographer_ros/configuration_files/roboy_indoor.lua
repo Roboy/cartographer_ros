@@ -51,7 +51,7 @@ POSE_GRAPH.optimization_problem.rotation_weight = 1e4
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = true
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.max_num_iterations = 20
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.ceres_solver_options.num_threads = 28
---TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 10 --20
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 5 --20
 --TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 2e3 --80
 
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = false
