@@ -146,6 +146,7 @@ Convert  `.pbstream`-file to `.yaml` map file::
 Editing
 -------
 We use GIMP::
+
 	sudo apt-get install gimp 
 	
 Drag & Drop the file into gimp. Use i.e. rectangle selection tool and bucket fill tool to mark large areas as not-navigatable. Do rectangle selection and use pencil tool for fine selection. the Export file as `.pgm` file.
@@ -154,7 +155,7 @@ Publishing
 ----------
 Cartographer publishes the `/map` topic in pure localization mode with the map it loads from the provided `.pbstream` file (compare next section). To publish a adapted map on  topic, do i.e.::
 
-	rosrun map_server map_server nav_map.yaml /map:=/nav_map
+	rosrun map_server map_server nav_map.yaml /map:=/nav_map /map_metadata:=/nav_map_metadata
 
 
 Pure Localization
