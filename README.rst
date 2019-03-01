@@ -74,17 +74,17 @@ To be able to run Roboys' code::
 	git checkout roboy
 
 
-Some useful syntax
-==================
+Data
+====
 
-Record a  `.bag`-file
----------------------
+Recording
+---------
 Create Roboys own bag `like here`_.
 
 .. _like here: https://google-cartographer-ros.readthedocs.io/en/latest/your_bag.html
 
-Check your `.bag`-file
-----------------------
+Checking
+--------
 `ROS Bag files`_ 
 
 .. _ROS Bag files: http://wiki.ros.org/Bags
@@ -94,31 +94,35 @@ Check your `.bag`-file
 	rosrun cartographer_ros cartographer_rosbag_validate -bag_filename your_bag.bag
 
 
-Cut `.bag`-files
-----------------
+Cutting
+-------
 Cut certain timeframe from `.bag`-file: 
 
 ::
 
 	rosbag filter Input.bag Output.bag "t.secs>= 1461760303 and t.secs <= 1461760503"
 
+SLAMing
+=======
 
-Run Cartographer online
------------------------
+live ('online')
+--------------------------------
 According files for Roboy are defined. To test with Roboy's bag run::
 
 	roslaunch cartographer_ros roboy_indoor_online.launch 
 	rosbag play ${HOME}/data/utum/utum_groundfloor_cw.bag
 
-Run Cartographer offline on a  `.bag`-file
-------------------------------------------
+Run Cartographer offline
+------------------------
 According files for Roboy are defined. To test with Roboys bag run::
 
 	roslaunch cartographer_ros roboy_indoor_offline.launch bag_filenames:=${HOME}/data/utum/utum_groundfloor_cw.bag
+Map
+===
 
-Save a Map 
-----------
-Instances given for saving a map after SLAM has finished to `generate a .pbstream-file`_ and then converting it to a ROS `.yaml` map file  
+Saving
+------
+Only needed for live cartographer. Instances given for saving a map after SLAM has finished to `generate a .pbstream-file`_ and then converting it to a ROS `.yaml` map file  
 
 .. _generate a .pbstream-file: https://github.com/googlecartographer/cartographer_ros/blob/master/docs/source/assets_writer.rst
 
@@ -139,8 +143,22 @@ Convert  `.pbstream`-file to `.yaml` map file::
 
 	rosrun cartographer_ros cartographer_pbstream_to_ros_map -pbstream_filename ${HOME}/Downloads/DeuMu.bag.pbstream
 
+Editing
+-------
+We use GIMP::
+	sudo apt-get install gimp 
+	
+Drag & Drop the file into gimp. Use i.e. rectangle selection tool and bucket fill tool to mark large areas as not-navigatable. Do rectangle selection and use pencil tool for fine selection. the Export file as `.pgm` file.
+
+Publishing
+----------
+Cartographer publishes the `/map` topic in pure localization mode with the map it loads from the provided `.pbstream` file (compare next section). To publish a adapted map on  topic, do i.e.::
+
+	rosrun map_server map_server nav_map.yaml /map:=/nav_map
+
+
 Pure Localization
------------------
+=================
 Launch cartographer_ros and provide it with the `.pbstream`-file saved from a previous offline-run with SLAM::
 
 	roslaunch cartographer_ros roboy_localization.launch load_state_filename:=${HOME}/data/utum/utum_groundfloor_cw.bag.pbstream
