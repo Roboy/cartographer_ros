@@ -85,7 +85,7 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_windo
 
 --POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 6
 
-POSE_GRAPH.constraint_builder.min_score = 0.55
+POSE_GRAPH.constraint_builder.min_score = 0.65
 
 --POSE_GRAPH.constraint_builder.ceres_scan_matcher
 
