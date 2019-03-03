@@ -12,8 +12,8 @@ POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = tr
 --    acceleration_weight = 1e3,
 --    rotation_weight = 3e5,
 --POSE_GRAPH.optimization_problem.huber_scale = 1e-1
-POSE_GRAPH.optimization_problem.acceleration_weight = 1e4
-POSE_GRAPH.optimization_problem.rotation_weight = 8e5
+POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
+POSE_GRAPH.optimization_problem.rotation_weight = 1e4
 
 --    local_slam_pose_translation_weight = 1e5,
 --    local_slam_pose_rotation_weight = 1e5,
