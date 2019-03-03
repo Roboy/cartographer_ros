@@ -47,7 +47,7 @@ POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e3
 --POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e4
 
 
---POSE_GRAPH.max_num_final_iterations = 20
+POSE_GRAPH.max_num_final_iterations = 20
 
 return options
 
