@@ -30,7 +30,7 @@ MAP_BUILDER.num_background_threads = 28
 
 -- -- INPUT DATA -- --
 TRAJECTORY_BUILDER_2D.min_range = 0.25
-TRAJECTORY_BUILDER_2D.max_range = 25
+TRAJECTORY_BUILDER_2D.max_range = 35
 
 TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 20
 
