@@ -1,6 +1,6 @@
 include "map_builder.lua"
 include "trajectory_builder.lua"
-include "roboy_outdoor_local.lua"
+include "rickshaw_local.lua"
 
 -- -- IMU -- --
 TRAJECTORY_BUILDER_2D.use_imu_data = true
