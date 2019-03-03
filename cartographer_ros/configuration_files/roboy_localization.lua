@@ -4,8 +4,8 @@ TRAJECTORY_BUILDER.pure_localization = true
 
 -- -- GLOBAL -- --
 POSE_GRAPH.global_constraint_search_after_n_seconds = 3
-POSE_GRAPH.constraint_builder.global_localization_min_score = 0.18
-POSE_GRAPH.global_sampling_ratio = 0.008
+POSE_GRAPH.constraint_builder.global_localization_min_score = 0.25
+POSE_GRAPH.global_sampling_ratio = 0.01
 
 -- -- LOCAL -- -- 
 POSE_GRAPH.constraint_builder.sampling_ratio = 0.4
