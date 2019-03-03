@@ -43,8 +43,8 @@ POSE_GRAPH.constraint_builder.min_score = 0.5--0.44
 
 --    loop_closure_translation_weight = 1.1e4,
 --    loop_closure_rotation_weight = 1e5,
---POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e1
---POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e6
+POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e3
+POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e4
 
 
 POSE_GRAPH.max_num_final_iterations = 20
