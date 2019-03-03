@@ -91,8 +91,8 @@ POSE_GRAPH.constraint_builder.min_score = 0.55
 
 POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e3
 POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e4
-POSE_GRAPH.matcher_translation_weight = 1e1
-POSE_GRAPH.matcher_rotation_weight = 1e3
+--POSE_GRAPH.matcher_translation_weight = 1e1
+--POSE_GRAPH.matcher_rotation_weight = 1e3
 --POSE_GRAPH.optimization_problem.*_weight
 --POSE_GRAPH.optimization_problem.ceres_solver_options
 
