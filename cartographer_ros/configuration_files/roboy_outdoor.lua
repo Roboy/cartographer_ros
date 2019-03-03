@@ -13,15 +13,15 @@ POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = tr
 --    rotation_weight = 3e5,
 --POSE_GRAPH.optimization_problem.huber_scale = 1e-1
 --POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
-POSE_GRAPH.optimization_problem.rotation_weight = 1e6
+--POSE_GRAPH.optimization_problem.rotation_weight = 1e6
 
 --    local_slam_pose_translation_weight = 1e5,
 --    local_slam_pose_rotation_weight = 1e5,
-POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e4
-POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 1e4
+--POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e4
+--POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 1e4
 
 -- -- GLOBAL -- --
-POSE_GRAPH.optimize_every_n_nodes = 0
+POSE_GRAPH.optimize_every_n_nodes = 100
 
 POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_threads = 28
 
@@ -38,12 +38,12 @@ POSE_GRAPH.constraint_builder.min_score = 0.44--0.44
 
 --  matcher_translation_weight = 5e2,
 --  matcher_rotation_weight = 1.6e3,
-POSE_GRAPH.matcher_translation_weight = 1e2
+--POSE_GRAPH.matcher_translation_weight = 1e2
 --POSE_GRAPH.matcher_rotation_weight = 2e3
 
 --    loop_closure_translation_weight = 1.1e4,
 --    loop_closure_rotation_weight = 1e5,
-POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e3
+--POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e3
 --POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e4
 
 
