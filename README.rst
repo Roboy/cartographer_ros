@@ -162,11 +162,11 @@ Pure Localization
 =================
 Launch cartographer_ros and provide it with the `.pbstream`-file saved from a previous offline-run with SLAM::
 
-	roslaunch cartographer_ros roboy_localization.launch load_state_filename:=${HOME}/data/utum/utum_groundfloor_cw.bag.pbstream
+	roslaunch cartographer_ros roboy_localization.launch load_state_filename:=${HOME}/data/2019_02_19/utum_5.bag.pbstream
 
 Play a `.bag`-file faking the live location of the robot::
 
-	rosbag play ${HOME}/data/utum/utum_groundfloor_ccw.bag
+	rosbag play ${HOME}/data/2019_02_19/utum_4.bag --clock
 
 
 Structure
