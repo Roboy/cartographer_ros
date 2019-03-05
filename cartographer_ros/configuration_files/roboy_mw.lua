@@ -19,8 +19,8 @@ TRAJECTORY_BUILDER_2D.use_imu_data = false
 --    acceleration_weight = 1e3,
 --    rotation_weight = 3e5,
 --POSE_GRAPH.optimization_problem.huber_scale = 1e-1
-POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
-POSE_GRAPH.optimization_problem.rotation_weight = 1e4
+--POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
+--POSE_GRAPH.optimization_problem.rotation_weight = 1e4
 
 
 -- -- GLOBAL -- --
@@ -43,13 +43,13 @@ POSE_GRAPH.constraint_builder.min_score = 0.50 -- 0.53 -- 0.59
 
 --    loop_closure_translation_weight = 1.1e4
 --    loop_closure_rotation_weight = 1e5
-POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 9e2
+POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e3 --9e3
 POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e4
 
 --  matcher_translation_weight = 5e2,
 --  matcher_rotation_weight = 1.6e3,
-POSE_GRAPH.matcher_translation_weight = 2e2 --8e2
-POSE_GRAPH.matcher_rotation_weight = 1e3 --3e3
+--POSE_GRAPH.matcher_translation_weight = 2e2 --8e2
+--POSE_GRAPH.matcher_rotation_weight = 1e3 --3e3
 
 --POSE_GRAPH.max_num_final_iterations = 1
 
