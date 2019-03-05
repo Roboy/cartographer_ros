@@ -12,8 +12,8 @@ TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 20 --20
 
 -- -- IMU -- --
-TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = false
-TRAJECTORY_BUILDER_2D.use_imu_data = true
+TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
+TRAJECTORY_BUILDER_2D.use_imu_data = false
 
 --    huber_scale = 1e1,
 --    acceleration_weight = 1e3,
