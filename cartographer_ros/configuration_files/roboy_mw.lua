@@ -2,19 +2,8 @@ include "map_builder.lua"
 include "trajectory_builder.lua"
 include "rickshaw_local.lua"
 
--- -- LOCAL -- --
-TRAJECTORY_BUILDER_2D.submaps.num_range_data = 30
-TRAJECTORY_BUILDER_2D.max_range = 40
-
-TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05
---TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 3
---TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
-
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 10 --20
-
 -- -- IMU -- --
-TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
-TRAJECTORY_BUILDER_2D.use_imu_data = false
+TRAJECTORY_BUILDER_2D.use_imu_data = true
 
 --    huber_scale = 1e1,
 --    acceleration_weight = 1e3,
