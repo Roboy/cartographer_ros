@@ -15,8 +15,8 @@ TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 20 --20
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 0.01 
 
 -- -- IMU -- --
-TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
-TRAJECTORY_BUILDER_2D.use_imu_data = false
+TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = false
+TRAJECTORY_BUILDER_2D.use_imu_data = true
 
 --    huber_scale = 1e1,
 --    acceleration_weight = 1e3,
