@@ -3,7 +3,7 @@ include "trajectory_builder.lua"
 include "rickshaw_local.lua"
 
 -- -- LOCAL -- --
-TRAJECTORY_BUILDER_2D.max_range = 70
+TRAJECTORY_BUILDER_2D.max_range = 50
 
 TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05
 TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 3
