@@ -11,9 +11,6 @@ TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05
 
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 20 --20
 
---TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.translation_delta_cost_weight = 0.01
---TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 0.01 
-
 -- -- IMU -- --
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = false
 TRAJECTORY_BUILDER_2D.use_imu_data = true
@@ -37,12 +34,10 @@ POSE_GRAPH.constraint_builder.max_constraint_distance = 10
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 50
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(30.0)
 
---POSE_GRAPH.constraint_builder.sampling_ratio = 0.05
-
 --POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 6
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.7
-POSE_GRAPH.constraint_builder.min_score = 0.55 -- 0.53 -- 0.59
+POSE_GRAPH.constraint_builder.min_score = 0.4 -- 0.53 -- 0.59
 
 --POSE_GRAPH.constraint_builder.ceres_scan_matcher
 
