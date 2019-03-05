@@ -1,4 +1,4 @@
-include "roboy_indoor.lua"
+include "roboy_mw.lua"
 
 TRAJECTORY_BUILDER.pure_localization = true
 
