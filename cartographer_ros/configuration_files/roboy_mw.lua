@@ -3,6 +3,8 @@ include "trajectory_builder.lua"
 include "rickshaw_local.lua"
 
 -- -- LOCAL -- --
+TRAJECTORY_BUILDER_2D.max_range = 70
+
 TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05
 TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 3
 TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
@@ -13,11 +15,16 @@ TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 0.01 
 
 -- -- IMU -- --
-TRAJECTORY_BUILDER_2D.max_range = 70
+--    huber_scale = 1e1,
+--    acceleration_weight = 1e3,
+--    rotation_weight = 3e5,
+--POSE_GRAPH.optimization_problem.huber_scale = 1e-1
+--POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
+--POSE_GRAPH.optimization_problem.rotation_weight = 1e7
 
 TRAJECTORY_BUILDER_2D.use_imu_data = true
-POSE_GRAPH.optimization_problem.acceleration_weight = 1e5
-POSE_GRAPH.optimization_problem.rotation_weight = 1e2
+--POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
+--POSE_GRAPH.optimization_problem.rotation_weight = 1e2
 
 
 -- -- GLOBAL -- --
