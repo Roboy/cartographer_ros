@@ -23,7 +23,7 @@ POSE_GRAPH.optimization_problem.acceleration_weight = 1e1
 --POSE_GRAPH.optimization_problem.rotation_weight = 1e7
 
 TRAJECTORY_BUILDER_2D.use_imu_data = true
-POSE_GRAPH.optimization_problem.acceleration_weight = 1e1
+--POSE_GRAPH.optimization_problem.acceleration_weight = 1e1
 --POSE_GRAPH.optimization_problem.rotation_weight = 1e2
 
 
