@@ -51,6 +51,6 @@ POSE_GRAPH.constraint_builder.min_score = 0.47 -- 0.53 -- 0.59
 -- POSE_GRAPH.matcher_translation_weight = 1e2
 -- POSE_GRAPH.matcher_rotation_weight = 1.3e3
 
---POSE_GRAPH.max_num_final_iterations = 10
+POSE_GRAPH.max_num_final_iterations = 1
 
 return options
