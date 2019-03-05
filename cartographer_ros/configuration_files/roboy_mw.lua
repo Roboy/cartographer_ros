@@ -13,6 +13,8 @@ TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 0.01 
 
 -- -- IMU -- --
+TRAJECTORY_BUILDER_2D.max_range = 70
+
 TRAJECTORY_BUILDER_2D.use_imu_data = true
 POSE_GRAPH.optimization_problem.acceleration_weight = 1e5
 POSE_GRAPH.optimization_problem.rotation_weight = 1e2
