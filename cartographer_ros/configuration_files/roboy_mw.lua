@@ -39,7 +39,7 @@ POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 9e3 --9e3
 --  matcher_translation_weight = 5e2,
 --  matcher_rotation_weight = 1.6e3,
 POSE_GRAPH.matcher_translation_weight = 3e3 --8e2
---POSE_GRAPH.matcher_rotation_weight = 1e3 --3e3
+POSE_GRAPH.matcher_rotation_weight = 3e3 --3e3
 
 --POSE_GRAPH.max_num_final_iterations = 1
 
