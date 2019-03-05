@@ -19,7 +19,7 @@ TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
 --    acceleration_weight = 1e3,
 --    rotation_weight = 3e5,
 --POSE_GRAPH.optimization_problem.huber_scale = 1e-1
---POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
+POSE_GRAPH.optimization_problem.acceleration_weight = 1e1
 --POSE_GRAPH.optimization_problem.rotation_weight = 1e7
 
 TRAJECTORY_BUILDER_2D.use_imu_data = true
