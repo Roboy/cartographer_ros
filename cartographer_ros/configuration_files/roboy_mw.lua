@@ -15,16 +15,14 @@ TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 20 --20
 --TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_weight= 0.01 
 
 -- -- IMU -- --
+TRAJECTORY_BUILDER_2D.use_imu_data = true
+
 --    huber_scale = 1e1,
 --    acceleration_weight = 1e3,
 --    rotation_weight = 3e5,
 --POSE_GRAPH.optimization_problem.huber_scale = 1e-1
--- POSE_GRAPH.optimization_problem.acceleration_weight = 1e1
---POSE_GRAPH.optimization_problem.rotation_weight = 1e7
-
-TRAJECTORY_BUILDER_2D.use_imu_data = true
---POSE_GRAPH.optimization_problem.acceleration_weight = 1e1
---POSE_GRAPH.optimization_problem.rotation_weight = 1e2
+POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
+POSE_GRAPH.optimization_problem.rotation_weight = 1e5
 
 
 -- -- GLOBAL -- --
