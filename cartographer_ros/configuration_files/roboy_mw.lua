@@ -9,7 +9,7 @@ TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05
 --TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 3
 --TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
 
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 20 --20
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 10 --20
 
 -- -- IMU -- --
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
