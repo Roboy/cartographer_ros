@@ -3,7 +3,7 @@ include "trajectory_builder.lua"
 include "rickshaw_local.lua"
 
 -- -- IMU -- --
-TRAJECTORY_BUILDER_2D.use_imu_data = false
+TRAJECTORY_BUILDER_2D.use_imu_data = true
 
 --    huber_scale = 1e1,
 --    acceleration_weight = 1e3,
