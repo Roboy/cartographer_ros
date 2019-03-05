@@ -23,7 +23,7 @@ TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 70
 --POSE_GRAPH.optimization_problem.rotation_weight = 1e7
 
 TRAJECTORY_BUILDER_2D.use_imu_data = true
---POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
+POSE_GRAPH.optimization_problem.acceleration_weight = 1e1
 --POSE_GRAPH.optimization_problem.rotation_weight = 1e2
 
 
@@ -49,7 +49,7 @@ POSE_GRAPH.constraint_builder.min_score = 0.55
 POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 1e3
 POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e4
 
-POSE_GRAPH.matcher_translation_weight = 1e2
+--POSE_GRAPH.matcher_translation_weight = 1e2
 --POSE_GRAPH.matcher_rotation_weight = 1e3
 --POSE_GRAPH.optimization_problem.*_weight
 --POSE_GRAPH.optimization_problem.ceres_solver_options
