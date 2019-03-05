@@ -21,8 +21,8 @@ TRAJECTORY_BUILDER_2D.use_imu_data = true
 --    acceleration_weight = 1e3,
 --    rotation_weight = 3e5,
 --POSE_GRAPH.optimization_problem.huber_scale = 1e-1
-POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
-POSE_GRAPH.optimization_problem.rotation_weight = 1e5
+--POSE_GRAPH.optimization_problem.acceleration_weight = 1e2
+--POSE_GRAPH.optimization_problem.rotation_weight = 1e5
 
 
 -- -- GLOBAL -- --
@@ -40,7 +40,7 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_windo
 
 --POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 6
 
-POSE_GRAPH.constraint_builder.sampling_ratio = 0.7
+--POSE_GRAPH.constraint_builder.sampling_ratio = 0.7
 POSE_GRAPH.constraint_builder.min_score = 0.58
 
 --POSE_GRAPH.constraint_builder.ceres_scan_matcher
@@ -52,7 +52,7 @@ POSE_GRAPH.constraint_builder.min_score = 0.58
 
 --  matcher_translation_weight = 5e2,
 --  matcher_rotation_weight = 1.6e3,
-POSE_GRAPH.matcher_translation_weight = 8e2
+--POSE_GRAPH.matcher_translation_weight = 8e2
 -- POSE_GRAPH.matcher_rotation_weight = 1.3e3
 
 --POSE_GRAPH.max_num_final_iterations = 10
