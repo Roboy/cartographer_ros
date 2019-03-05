@@ -34,8 +34,8 @@ POSE_GRAPH.constraint_builder.ceres_scan_matcher.ceres_solver_options.num_thread
 POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
 POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = true
 
-POSE_GRAPH.constraint_builder.max_constraint_distance = 20
-POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 25
+POSE_GRAPH.constraint_builder.max_constraint_distance = 30
+POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.linear_search_window = 50
 POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_window = math.rad(30.0)
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.05
@@ -52,8 +52,8 @@ POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e4
 
 --  matcher_translation_weight = 5e2,
 --  matcher_rotation_weight = 1.6e3,
---POSE_GRAPH.matcher_translation_weight = 1e2
---POSE_GRAPH.matcher_rotation_weight = 1.3e3
+-- POSE_GRAPH.matcher_translation_weight = 1e2
+-- POSE_GRAPH.matcher_rotation_weight = 1.3e3
 
 --POSE_GRAPH.max_num_final_iterations = 10
 
