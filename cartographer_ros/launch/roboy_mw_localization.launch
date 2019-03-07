@@ -1,6 +1,6 @@
 <launch>
   
-  <arg name="load_state_filename" value="~/data/maps/MW_map.pbstream"/>
+  <arg name="load_state_filename" value="${HOME}/data/maps/MW_map_clean.pbstream"/>
 
   <param name="robot_description"
     textfile="$(find cartographer_ros)/urdf/roboy.urdf" />
