@@ -2,6 +2,6 @@
 
   <param name="/use_sim_time" value="true" />
   
-  <include file="$(find cartographer_ros)/cartographer_ros/launch/roboy_mw_localization.launch"/>
+  <include file="$(find cartographer_ros)/launch/roboy_mw_localization.launch"/>
 
 </launch>
