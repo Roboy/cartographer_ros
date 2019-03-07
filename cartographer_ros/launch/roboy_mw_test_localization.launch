@@ -1,11 +1,10 @@
 <launch>
-
-  <arg name="map" default="${HOME}/data/maps/MW_map.pbstream"/>
+  <arg name="map" default="load_state_filename:=${HOME}/data/maps/MW_map.pbstream"/>
 
   
   <param name="/use_sim_time" value="true" />
   
   <include file="$(find cartographer_ros)/launch/roboy_mw_localization.launch"/>
-      <arg name="load_state_filename" value="$(arg map)"/>
+      <arg name="map" value="$(arg map)"/>
 
 </launch>
