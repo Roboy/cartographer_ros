@@ -27,13 +27,13 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_windo
 --POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.branch_and_bound_depth = 6
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.7
-POSE_GRAPH.constraint_builder.min_score = 0.65 -- 0.53 -- 0.59
+POSE_GRAPH.constraint_builder.min_score = 0.64 -- 0.53 -- 0.59
 
 --POSE_GRAPH.constraint_builder.ceres_scan_matcher
 
 --    loop_closure_translation_weight = 1.1e4
 --    loop_closure_rotation_weight = 1e5
-POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 9e3 --9e3
+POSE_GRAPH.constraint_builder.loop_closure_translation_weight = 8e3 --9e3
 --POSE_GRAPH.constraint_builder.loop_closure_rotation_weight = 1e4
 
 --  matcher_translation_weight = 5e2,
