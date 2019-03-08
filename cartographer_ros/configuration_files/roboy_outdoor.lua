@@ -3,7 +3,7 @@ include "trajectory_builder.lua"
 include "rickshaw_local.lua"
 
 -- -- IMU -- --
-TRAJECTORY_BUILDER_2D.use_imu_data = true
+TRAJECTORY_BUILDER_2D.use_imu_data = false
 
 POSE_GRAPH.optimization_problem.ceres_solver_options.num_threads = 28
 POSE_GRAPH.optimization_problem.ceres_solver_options.use_nonmonotonic_steps = true
@@ -32,7 +32,7 @@ POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher.angular_search_windo
 
 --POSE_GRAPH.constraint_builder.sampling_ratio = 0.5
 
-POSE_GRAPH.constraint_builder.min_score = 0.44--0.44
+POSE_GRAPH.constraint_builder.min_score = 0.54--0.44
 
 -- LOOP CLOSURE --
 
