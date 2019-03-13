@@ -159,14 +159,23 @@ Drag & Drop the `.pgm`-file into gimp. Use i.e. rectangle selection tool and buc
 
 Pure Localization
 =================
+Pure localizations publishes /tf frames between the map origin and the robot's base_link. For these /tf messages, ROS times are essential. This is why there are different procedures for Testing (a.k. from bag file) and live localization. 
+
+Testing & Developing
+--------------------
 Launch cartographer_ros and provide it with the `.pbstream`-file saved from a previous offline-run with SLAM::
 
-	roslaunch cartographer_ros roboy_mw_localization.launch load_state_filename:=${HOME}/data/maps/MW_1.pbstream
+	roslaunch cartographer_ros roboy_mw_test_localization.launch load_state_filename:=${HOME}/data/maps/MW_1.pbstream
 
 Play a `.bag`-file faking the live location of the robot::
 
 	rosbag play ${HOME}/data/2019_03_05/MW_drive.bag --clock
 
+Going Live
+----------
+Start your Lidar and IMU nodes and run::
+
+	roslaunch cartographer_ros roboy_mw_localization.launch load_state_filename:=${HOME}/data/maps/MW_1.pbstream
 
 Structure
 =========
