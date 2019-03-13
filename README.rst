@@ -139,9 +139,15 @@ Visualize `.pbstream`-file::
 
 	roslaunch cartographer_ros visualize_pbstream.launch pbstream_filename:=${HOME}/Downloads/DeuMu.bag.pbstream
 
+Convert & Publish
+-----------------
 Convert  `.pbstream`-file to `.yaml` map file::
 
 	rosrun cartographer_ros cartographer_pbstream_to_ros_map -pbstream_filename ${HOME}/Downloads/DeuMu.bag.pbstream
+
+Cartographer publishes the `/map` topic in pure localization mode with the map it loads from the provided `.pbstream` file (compare next section). To publish i.e. an adapted map on `/nav_map` topic, do i.e.::
+
+	rosrun map_server map_server nav_map.yaml /map:=/nav_map /map_metadata:=/nav_map_metadata
 
 Editing
 -------
@@ -149,14 +155,7 @@ We use GIMP::
 
 	sudo apt-get install gimp 
 	
-Drag & Drop the file into gimp. Use i.e. rectangle selection tool and bucket fill tool to mark large areas as not-navigatable. Do rectangle selection and use pencil tool for fine selection. the Export file as `.pgm` file.
-
-Publishing
-----------
-Cartographer publishes the `/map` topic in pure localization mode with the map it loads from the provided `.pbstream` file (compare next section). To publish a adapted map on  topic, do i.e.::
-
-	rosrun map_server map_server nav_map.yaml /map:=/nav_map /map_metadata:=/nav_map_metadata
-
+Drag & Drop the `.pgm`-file into gimp. Use i.e. rectangle selection tool and bucket fill tool to mark large areas as not-navigatable. Do rectangle selection and use pencil tool for fine selection. the Export file as `.pgm` file.
 
 Pure Localization
 =================
