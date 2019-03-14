@@ -2,7 +2,7 @@ options = {
   map_builder = MAP_BUILDER,
   trajectory_builder = TRAJECTORY_BUILDER,
   map_frame = "map",
-  tracking_frame = "base_link",
+  tracking_frame = "imu",
   published_frame = "base_link",
   odom_frame = "odom",
   provide_odom_frame = true,
@@ -57,7 +57,5 @@ TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(1.0)
 
 TRAJECTORY_BUILDER_2D.submaps.num_range_data = 12 --10
 TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
-
---TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 1080
 
 return options
