@@ -83,6 +83,11 @@ Create Roboys own bag `like here`_.
 
 .. _like here: https://google-cartographer-ros.readthedocs.io/en/latest/your_bag.html
 
+::
+
+	roslaunch roboy_ad sensors.launch
+	rosbag record /scan /imu
+
 Checking
 --------
 `ROS Bag files`_ 
