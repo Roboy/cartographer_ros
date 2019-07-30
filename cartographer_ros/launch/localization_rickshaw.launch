@@ -15,8 +15,11 @@
 -->
 
 <launch>
+  <arg name="no_rviz" default="false" />
+  <param name="/use_sim_time" value="true" />
+
   <param name="robot_description"
-    textfile="$(find cartographer_ros)/urdf/roboy.urdf" />
+    textfile="$(find cartographer_ros)/urdf/rickshaw.urdf" />
 
   <node name="robot_state_publisher" pkg="robot_state_publisher"
     type="robot_state_publisher" />
@@ -24,27 +27,18 @@
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory $(find cartographer_ros)/configuration_files
-          -configuration_basename roboy_indoor.lua"
+          -configuration_basename localization_rickshaw.lua
+          -load_state_filename $(arg load_state_filename)"
       output="screen">
-    <remap from="scan" to="scan" />
   </node>
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
       type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
-
-  <!--<node name="sick_mrs_6xxx" pkg="sick_scan" type="sick_generic_caller"  respawn="false" output="screen">
-    <param name="filter_echos" value="0"/>
-    <param name="hostname" type="string" value="192.168.1.42" />
-    <param name="max_ang" type="double" value="2.365" /> 
-    <param name="min_ang" type="double" value="-2.365" /> 
-    <param name="port" type="string" value="2112" />
-    <param name="range_max" type="double" value="70.0" />
-    <param name="range_min" type="double" value="0.8" />
-    <param name="scanner_type" type="string" value="sick_lms_1xx" />
-    <param name="timelimit" type="int" value="5" />
-  </node>-->
-
-  <!--<node name="rviz" pkg="rviz" type="rviz" required="true"
-      args="-d $(find cartographer_ros)/configuration_files/demo_2d.rviz" />-->
-
+  
+  <group unless="$(arg no_rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" required="true"
+        args="-d $(find cartographer_ros)/configuration_files/testrig3D.rviz" />
+  </group>
+  <node name="playbag" pkg="rosbag" type="play"
+      args="--clock $(arg bag_filename)" />
 </launch>

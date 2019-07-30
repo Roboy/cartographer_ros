@@ -12,7 +12,7 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
-include "backpack_2d.lua"
+include "rickshaw_indoor.lua"
 
 POSE_GRAPH.constraint_builder.sampling_ratio = 0
 POSE_GRAPH.global_sampling_ratio = 0
